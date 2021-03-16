@@ -9,3 +9,177 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAV BAR */
+nav{
+    height: 8vh;
+}
+nav ul{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;  
+}
+
+li>a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+#nav-img{
+    height: 5vh;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* JUMBOTRON */
+.jumbotron {
+    height: 92vh;
+    background-image: url('./images/couple-1.jpg');
+    background-size: cover;
+}
+
+.jumbotron img{
+    height: 30vh;
+    
+}
+hr{
+    height: 4px;
+    width: 70%;
+    background-color: black;
+    border: none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.jumbotron-container{
+    background-color: rgba(255,255,255, 0.7);
+    padding: 4em 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+
+}
+
+.jumbotron-container h2 {
+    font-size: 2em;
+}
+
+/* HISTORY */
+.history{
+    background-color: #f5f5f5;
+}
+#history-container{
+    width: 70%;
+    height: 60vh;
+
+    display: flex;
+    position: relative;
+}
+#history-container h3{
+    text-align: center;
+    margin-bottom: .5em;
+    font-size: 2em;
+}
+#history-container .vera-3{
+    height: 100%;
+    border-radius: 50%;
+}
+#history-container-icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px;
+}
+#history-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2em;
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+#quote-right{
+    text-align: right;
+}
+
+/* PITCH */
+
+#pitch-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+#pitch-container ul{
+    margin-top: 2em;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 1.3em;
+    padding-left: 4em;
+}
+#pitch-container h3{
+    font-size: 2.5em;
+    text-align: center;
+}
+.verafied-checkmarks{
+    height: 70px;
+}
+/* CONTACT */
+.contact{
+    background: #f5f5f5;
+}
+.contact h3{
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+.contact form{
+    width: 80%;
+    
+}
+.contact input{
+    height: 6vh;
+    
+}
+.contact input, .contact textarea{
+    width: 100%;
+    padding-left: 1em;
+    margin-top: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+}
+
+.contact textarea{
+    padding: 1em;
+}
+
+/* FOOTER */
+footer{
+   height: 8vh;
+   background-color: black;
+   
+}
+
+footer ul{
+    height: 100%;
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    color: white;
+    margin: 1em;
+}
