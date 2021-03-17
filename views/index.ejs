@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verafiable</title>
-</head>
-<body>
+<%- include('./partials/header') %> 
     <nav>
         <ul>
-            <li><a href="#"></a></li>
+            <li><a href="#"> <img id="nav-img" src="/images/verafied-text-white.svg" alt=""></a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Testimonials</a></li>
             <li><a href="#">Meet the Team</a></li>
@@ -18,64 +10,70 @@
         </ul>
     </nav>
     <section class="jumbotron">
-            <div id="logo-container">
-                <img src="" alt="">
-                <h2>Quality over Quantity</h2>
+            <div class="jumbotron-container">
+                <img src="/images/verafied-text-white.svg" alt="Verafied Logo and Text">
+                <hr>
+                <h2><em>Quality over Quantity</em></h2>
             </div>
+
     </section>
     <section class="history">
         <div id="history-container">
-            <div id="history-img">
-
-            </div>
+            <img class="vera-3" src="/images/vera-3.jpg" alt="Picture of Ashley Vera, Founder">
             <div id="history-text-container">
-                <h3>How Verafied was created</h3>
+                <h3>How <span><img class="logo-text" src="/images/verafied-text.svg" alt="Verafied Logo Text"></span>™ was created</h3>
                 <p>As a single person myself, I have found it incredibly frustrating to find a service to cover my needs. From flaky suitors to matches who look nothing like their pictures online; I became exhausted in my search for love. Verafied was created by incorporating all of the elements I thought were missing in a dating/matchmaking service.</p>
+                <p id="quote-right"><img id="history-container-icon" src="/images/verafied-logo.svg" alt="Verafied Logo">Ashley Vera, Founder</p>
             </div>
         </div>
     </section>
     <section class="pitch">
-        <div>
-            <h3>Here's how Verafied is different from the other dating websites:</h3>
+        <div id="pitch-container">
+            <h3>Here's how <span><img class="logo-text" src="/images/verafied-text-white.svg" alt="Verafied Logo Text"></span>™ is different from the other dating websites:</h3>
             <ul>
-                <li><i></i> The team at Verafied personally sits down with each client to find out who they are and what they're looking for.</li>
-                <li><i></i> The Verafied team creates each clients profile and verifies photos and provides background checks, saving you time</li>
-                <li><i></i> We take the guessing out of dating by ensuring the profile actually matches the client </li>
-                <li><i></i> Once the profile / questionnaire is complete we search our database to find our clients possible connections</li>
-                <li><i></i> We offer dating / relationship advice, tips, and updated photographs for your profile. </li>
+                <li><img class="verafied-checkmarks" src="/images/verafied-checkmark-white.svg" alt="Verafied Checkmark"> The team at Verafied personally sits down with each client to find out who they are and what they're looking for.</li>
+                <li><img class="verafied-checkmarks" src="/images/verafied-checkmark-white.svg" alt="Verafied Checkmark"> The Verafied team creates each clients profile and verifies photos and provides background checks, saving you time.</li>
+                <li><img class="verafied-checkmarks" src="/images/verafied-checkmark-white.svg" alt="Verafied Checkmark"> We take the guessing out of dating by ensuring the profile actually matches the client. </li>
+                <li><img class="verafied-checkmarks" src="/images/verafied-checkmark-white.svg" alt="Verafied Checkmark"> Once the profile / questionnaire is complete we search our database to find our clients possible connections.</li>
+                <li><img class="verafied-checkmarks" src="/images/verafied-checkmark-white.svg" alt="Verafied Checkmark"> We offer dating / relationship advice, tips, and updated photographs for your profile. </li>
             </ul>
             
             
         </div>
+        <img id="pitch-bg-logo" src="/images/verafied-logo-white.svg" alt="Verafied Corner Logo">
     </section>
     <section class="contact">
-        <div id="social-container">
-            <h3>Follow us:</h3>
-            <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Pinterest</a></li>
-            </ul>
-        </div>
-        <div id="contact-container">
-            <h3>Follow us:</h3>
-            <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Pinterest</a></li>
-            </ul>
-        </div>
+
+            <h3>Contact us:</h3>
+                <form action="/contact" method="POST">
+                    <div>
+                        <label for="name" >
+                            <input type="text" name="name" placeholder="Name">
+                        </label>
+                    </div>
+                    <div >
+                        <label for="email" >
+                            <input type="email" name="email" placeholder="Email">
+                        </label>
+                    </div>
+                    <div >
+                        <label for="message" >
+                            <textarea name="message" id="contact-message" cols="30" rows="12" placeholder="Contact us directly and we will get back to you ASAP!"></textarea>
+                        </label>
+                    </div>
+
+                    <input class="submit" type="submit" value="Submit">
+                    </form>
+
     </section>
 
     <footer>
+        <h5>Check out <span><img src="/images/verafied-text-white.svg" alt="Footer Logo"></span> on our Socials!</h5>
         <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Pinterest</a></li>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://instagram.com/verafiedlove"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/verafiedlove"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.tiktok.com/@verafiedlove?"><i class="fab fa-tiktok"></i></a></li>
         </ul>
     </footer>
-</body>
-</html>
+    <%- include('./partials/footer') %> 

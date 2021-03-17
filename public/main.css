@@ -14,9 +14,16 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h3{
+    letter-spacing: 2px;
+}
+
 /* NAV BAR */
 nav{
     height: 8vh;
+    letter-spacing: 2px;
+    background-color: var(--black);
+    
 }
 nav ul{
     display: flex;
@@ -28,7 +35,7 @@ nav ul{
 
 li>a {
     text-decoration: none;
-    color: var(--black);
+    color: var(--secondary);
 }
 
 #nav-img{
@@ -56,24 +63,28 @@ section{
 hr{
     height: 4px;
     width: 70%;
-    background-color: black;
+    background-color: white;
     border: none;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 .jumbotron-container{
-    background-color: rgba(255,255,255, 0.7);
+    background-color: rgba(0,0,0, 0.7);
     padding: 4em 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
+    color: white;
 
 }
 
 .jumbotron-container h2 {
     font-size: 2em;
+    letter-spacing: 2px;
+    font-weight: 300;
 }
+
 
 /* HISTORY */
 .history{
@@ -90,15 +101,16 @@ hr{
     text-align: center;
     margin-bottom: .5em;
     font-size: 2em;
+    letter-spacing: 1px;
+}
+.logo-text{
+    height: 1.75em;
 }
 #history-container .vera-3{
     height: 100%;
     border-radius: 50%;
 }
 #history-container-icon{
-    position: absolute;
-    left: 0;
-    top: 0;
     height: 50px;
 }
 #history-text-container{
@@ -111,17 +123,33 @@ hr{
 }
 #quote-right{
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 /* PITCH */
-
+.pitch{
+    background-color: black;
+    position: relative;
+}
+#pitch-bg-logo{
+    position: absolute;
+    bottom: 1em;
+    height: 70vh;
+    right: 0;
+    opacity: 0.5;
+    z-index: 1;
+}
 #pitch-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 90%;
+    color: white;
 }
 #pitch-container ul{
+    z-index: 2;
     margin-top: 2em;
     list-style: none;
     line-height: 1.6;
@@ -157,6 +185,7 @@ hr{
     margin-top: 1em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.25em;
+    letter-spacing: 2px;
 }
 
 .contact textarea{
@@ -165,9 +194,19 @@ hr{
 
 /* FOOTER */
 footer{
-   height: 8vh;
+   height: 20vh;
    background-color: black;
-   
+   letter-spacing: 2px;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding-top: 1.5em;
+}
+footer h5{
+    padding: 0;
+    margin: 0;
 }
 
 footer ul{
@@ -178,8 +217,27 @@ footer ul{
     justify-content: center;
     align-items: center;
 }
-
+footer a>i{
+    font-size: x-large;
+}
+footer img{
+    height: 2em;
+}
 footer a{
     color: white;
     margin: 1em;
+}
+
+footer .fa-facebook:hover{
+    color: #3b5998;
+}
+
+footer .fa-instagram:hover{
+    color: #FD1D1D;
+}
+footer .fa-twitter:hover{
+    color: #1DA1F2;
+}
+footer .fa-tiktok:hover{
+    color: #69C9D0;
 }
