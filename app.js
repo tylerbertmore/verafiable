@@ -30,6 +30,11 @@ app.get('/', (req, res) => {
   res.render('index');
 })
 
+app.get('/questionnaire', (req, res) => {
+  res.render('questionnaire');
+})
+
+
 
 //LISTENER
 app.listen(PORT, () => console.log(`I'm listening on port: ${PORT}`));
