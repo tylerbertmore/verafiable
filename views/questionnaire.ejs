@@ -1,6 +1,115 @@
 <%- include('./partials/header') %> 
-<section>
+<div id="questionnaire">
     <h1>Questionnaire</h1>
+    
+    
+    <form id="questionnaire-form" action="/person" method="POST">
+        <!-- fullname -->
+        <div>
+            <label for="fullName" >
+                <p>Full Name</p>
+                <input type="text" name="fullName" placeholder="Enter your Full Name" required>
+            </label>
+        </div>
+        <!-- AGE -->
+        <div>
+            <label for="age" > 
+                <p>Age</p>
+                <input type="number" name="age" placeholder="Enter Age" required>
+            </label>
+        </div>
+        <!-- Dropdown -->
+        <div>
+            <label for="ethnicity">
+                <p>Choose your Ethnicity</p>
+            <select name="ethnicity" id="ethnicity">
+              <option value="white">White</option>
+              <option value="black">Black</option>
+              <option value="asian">Asian</option>
+            </select>
+        </label>
+        </div>
 
-</section>
+        <!-- BIRTHDATE -->
+        <div>
+            <label for="birthday" >
+                <p>Birthday</p>
+                <input type="date" min="1903-01-02" max="2004-01-01" name="birthday" placeholder="Birthday" required>
+            </label>
+        </div>
+        <!-- open ended -->
+        <div>
+            <label for="openEnded">
+                <p>Open Ended question</p>
+                <textarea id="openEnded" name="openEnded" rows="4" cols="50" placeholder="Enter an answer to an open ending question">
+                </textarea>
+            </label>
+        </div>
+        <!-- hobbies -->
+        <p>Hobbies:</p>
+        <div class="multi-answers">
+            
+            <label for="hobbies1">
+                
+                
+                <select name="hobbies1" id="hobbies1">
+                    <option value="" disabled selected>Hobby 1</option>
+                    <option value="bowling">bowling</option>
+                    <option value="hiking">hiking</option>
+                    <option value="dancing">dancing</option>
+                    <option value="skating">skating</option>
+                    <option value="biking">biking</option>
+                    <option value="drinking">drinking</option>
+                  </select>
+            </label>
+            <label for="hobbies2">
+                
+                
+                <select name="hobbies2" id="hobbies2">
+                    <option value="" disabled selected>Hobby 2</option>
+                    <option value="bowling">bowling</option>
+                    <option value="hiking">hiking</option>
+                    <option value="dancing">dancing</option>
+                    <option value="skating">skating</option>
+                    <option value="biking">biking</option>
+                    <option value="drinking">drinking</option>
+                  </select>
+            </label>
+            <label for="hobbies3">
+                
+                
+                <select name="hobbies3" id="hobbies3">
+                    <option value="" disabled selected>Hobby 3</option>
+                    <option value="bowling">bowling</option>
+                    <option value="hiking">hiking</option>
+                    <option value="dancing">dancing</option>
+                    <option value="skating">skating</option>
+                    <option value="biking">biking</option>
+                    <option value="drinking">drinking</option>
+                  </select>
+            </label>
+        </div>
+
+        <label for="movies">
+                <p>Movies</p>
+                <div class="select-and-text">
+                    
+                    <select name="movies" id="movies">
+                        <option value="" disabled selected>Movie Genres</option>
+                        <option value="dontlike">I dont like movies</option>
+                        <option value="horror">horror</option>
+                        <option value="action">action</option>
+                        <option value="sci-fi">sci fi</option>
+                        <option value="romance">romance</option>
+        
+                      </select>
+                      <input type="text" name="favMovie" placeholder="Favorite Movie?" required>
+                </div>
+        </label>
+
+        <input id="questionnaire-submit" class="submit" type="submit" value="Submit">
+    </form>
+
+
+</div>
 <%- include('./partials/footer') %> 

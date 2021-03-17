@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const personSchema = new mongoose.Schema({
-  name: String,
-  age: Number,
-  ageRange: String,
+  fullName: String,
+  partnerAgeRange: String,
   birthday: Date,
+  openEnded: String,
   sign: String,
   height: String,
   ethnicity: String,
@@ -15,6 +15,7 @@ const personSchema = new mongoose.Schema({
   children: Number,
   partnerChildren: String,
   alcohol: String,
+  favAlcohol: String,
   partnerAlcohol: String,
   cigarettes: String,
   partnerCigarettes: String,
