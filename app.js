@@ -72,6 +72,10 @@ app.get('/', (req, res) => {
   res.render('index');
 })
 
+app.get('/usertest', (req, res) => {
+  res.render('usertest');
+})
+
 // SIGN UP GET
 app.get('/signup', (req, res) => {
   res.render('users/signup')
@@ -84,7 +88,7 @@ app.post('/signup', async (req, res) => {
       req.login(registeredUser, err => {
           if(err) return console.log(err);
           req.flash('success', 'Successfully Registered!')
-          res.redirect('tickets');
+          res.redirect('usertest');
       })
   } catch(e){
       req.flash('error', e.message);
@@ -102,7 +106,7 @@ app.post('/login', passport.authenticate('local', {
   failureRedirect: '/login',
   }), (req, res) => {
   req.flash('success', 'Successfully logged in!');
-  res.redirect('tickets');
+  res.redirect('usertest');
 });
 
 //LOGOUT GET

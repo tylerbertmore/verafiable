@@ -19,6 +19,32 @@ h3{
 
 }
 
+/* FLASH MESSAGES */
+.flash-container{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    width: 80%;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
 /* NAV BAR */
 nav{
     height: 8vh;
@@ -237,8 +263,8 @@ textarea{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-top: 5em;
 }
 /* FOOTER */
 footer{
