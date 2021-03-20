@@ -34,7 +34,6 @@ const personSchema = new mongoose.Schema({
   military: String,
   partnerMilitary: String,
   livingSituation: String,
-  partnetLivingSituation: String,
   partnerLivingSituation: String,
   outdoorsy: String,
   partnerOutdoorsy: String,
