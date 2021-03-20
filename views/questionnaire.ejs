@@ -4,25 +4,26 @@
     
     
     <form id="questionnaire-form" action="/questionnaire" method="POST">
-        <!-- fullname -->
+        <!-- STRING INPUT -->
         <div>
             <label for="fullName" >
                 <p>Full Name</p>
                 <input type="text" name="fullName" placeholder="Enter Full Name" required>
             </label>
         </div>
-        <!-- AGE -->
+        <!-- Number INPUT -->
         <div>
             <label for="age" > 
                 <p>Age</p>
                 <input type="number" name="age" placeholder="Enter Age" required>
             </label>
         </div>
-        <!-- Ethnicity -->
+        <!-- SINGLE DROPDOWN INPUT -->
         <div>
             <label for="ethnicity">
                 <p>Choose your Ethnicity</p>
             <select name="ethnicity" id="ethnicity">
+                <option value="" disabled selected>Choose One</option>
               <option value="white">White</option>
               <option value="black">Black</option>
               <option value="asian">Asian</option>
@@ -30,14 +31,14 @@
         </label>
         </div>
 
-        <!-- BIRTHDATE -->
+        <!-- DATE -->
         <div>
             <label for="birthday" >
                 <p>Birthday</p>
                 <input type="date" min="1903-01-02" max="2004-01-01" name="birthday" placeholder="Birthday" required>
             </label>
         </div>
-        <!-- open ended -->
+        <!-- OPEN ENDED -->
         <div>
             <label for="openEnded">
                 <p>Open Ended question</p>
