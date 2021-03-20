@@ -19,6 +19,16 @@ h3{
 
 }
 
+main{
+    min-height: 100vh;
+}
+/* NAVBAR */
+.navbar-right{
+    display: flex;
+}
+.navbar-right li{
+    padding-left: 1em;
+}
 /* FLASH MESSAGES */
 .flash-container{
     display: flex;
@@ -260,7 +270,6 @@ textarea{
 
 /* LOGIN SIGN UP */
 .login-signup-container{
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;

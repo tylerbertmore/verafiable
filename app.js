@@ -88,7 +88,7 @@ app.post('/signup', async (req, res) => {
       req.login(registeredUser, err => {
           if(err) return console.log(err);
           req.flash('success', 'Successfully Registered!')
-          res.redirect('usertest');
+          res.redirect('/people/index');
       })
   } catch(e){
       req.flash('error', e.message);
@@ -106,7 +106,7 @@ app.post('/login', passport.authenticate('local', {
   failureRedirect: '/login',
   }), (req, res) => {
   req.flash('success', 'Successfully logged in!');
-  res.redirect('usertest');
+  res.redirect('/people/');
 });
 
 //LOGOUT GET
@@ -115,6 +115,8 @@ app.get('/logout', (req, res) => {
   req.flash('success', 'You have logged out Successfully');
   res.redirect('login')
 })
+
+
 
 // Users controller
 app.use('/users', ctrl.users);
@@ -125,7 +127,20 @@ app.use('/people', ctrl.people);
 app.get('/questionnaire', (req, res) => {
   res.render('questionnaire');
 })
-
+app.post('/questionnaire', isLoggedIn, (req, res) => {
+  db.Person.create(
+    {description: req.body.description,
+       department: req.body.department, 
+       requestedBy: req.body.requestedBy,
+        tech: null}, (err, newPerson) =>{
+    if(err){
+      console.log(err)
+    }
+    console.log(newPerson)
+  })
+  req.flash('success', 'Person Successfully Added');
+  res.redirect('/people/')
+});
 
 
 //LISTENER

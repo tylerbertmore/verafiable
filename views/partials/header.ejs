@@ -13,10 +13,23 @@
     <nav>
         <ul>
             <li><a href="/"> <img id="nav-img" src="/images/verafied-text-white.svg" alt=""></a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="/signup">Signup</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/questionnaire">Questionnaire</a></li>
+            <% if(!currentUser) { %>
+                <div class="navbar-right">
+                    <li><a href="/signup">Signup</a></li>
+                    <li><a href="/login">Login</a></li>
+                </div>
+
+            <% } %>
+
+            <% if(currentUser) { %>
+                <li><a href="/questionnaire">Questionnaire</a></li>
+                <div>
+                    <li><a href="/logout">Logout</a></li>
+                </div>
+                
+               
+            <% } %>
+
 
         </ul>
     </nav>
