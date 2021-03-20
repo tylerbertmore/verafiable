@@ -30,12 +30,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 
 
-app.use((req, res, next) => {
-  res.locals.success = req.flash('success');
-  res.locals.error = req.flash('error');
-  res.locals.currentUser = req.user;
-  next();
-});
+
 
 app.use(require('express-session')({
   secret: process.env.SECRET,
@@ -61,6 +56,7 @@ app.use((req, res, next) => {
   res.locals.currentUser = req.user;
   next();
 });
+
 
 app.use((req, res, next) => {
   const method = req.method;
@@ -110,7 +106,7 @@ app.post('/login', passport.authenticate('local', {
 });
 
 //LOGOUT GET
-app.get('/logout', isLoggedIn, (req, res) => {
+app.get('/logout', (req, res) => {
   req.logout();
   req.flash('success', 'You have logged out Successfully');
   res.redirect('login')

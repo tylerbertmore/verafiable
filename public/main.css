@@ -231,6 +231,15 @@ textarea{
 .select-and-text{
     display: flex;
 }
+
+/* LOGIN SIGN UP */
+.login-signup-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /* FOOTER */
 footer{
    height: 20vh;
