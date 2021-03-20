@@ -2,7 +2,9 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 const passport = require('passport');
+const flash = require('connect-flash');
 const LocalStrategy = require('passport-local');
 require('dotenv').config();
 const PORT = process.env.PORT;
@@ -113,6 +115,12 @@ app.get('/logout', isLoggedIn, (req, res) => {
   req.flash('success', 'You have logged out Successfully');
   res.redirect('login')
 })
+
+// Users controller
+app.use('/users', ctrl.users);
+// Tickets controller
+app.use('/people', ctrl.people);
+
 
 app.get('/questionnaire', (req, res) => {
   res.render('questionnaire');
