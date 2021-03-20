@@ -118,10 +118,6 @@ app.get('/logout', (req, res) => {
 
 
 
-// Users controller
-app.use('/users', ctrl.users);
-// Tickets controller
-app.use('/people', ctrl.people);
 
 
 app.get('/questionnaire', (req, res) => {
@@ -129,10 +125,14 @@ app.get('/questionnaire', (req, res) => {
 })
 app.post('/questionnaire', isLoggedIn, (req, res) => {
   db.Person.create(
-    {description: req.body.description,
-       department: req.body.department, 
-       requestedBy: req.body.requestedBy,
-        tech: null}, (err, newPerson) =>{
+    {fullName: req.body.fullName,
+       age: req.body.age, 
+       ethnicity: req.body.ethnicity,
+       birthday: req.body.birthday,
+       openEnded: req.body.openEnded,
+       movies: req.body.movies,
+       favMovie: req.body.favMovie
+        }, (err, newPerson) =>{
     if(err){
       console.log(err)
     }
@@ -141,6 +141,12 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
   req.flash('success', 'Person Successfully Added');
   res.redirect('/people/')
 });
+
+// Users controller
+app.use('/users', ctrl.users);
+// Tickets controller
+app.use('/people', ctrl.people);
+
 
 
 //LISTENER

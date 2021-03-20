@@ -12,9 +12,15 @@ function isLoggedIn(req, res, next){
   res.redirect('/login');
 }
 
-router.get('/', (req, res) => {
-  res.render('people/index')
+router.get('/', isLoggedIn, (req, res) => {
+  db.Person.find({})
+  .sort({'createdAt': -1})
+  .exec((err, foundPeople) => {
+    if(err) return console.log(err);
+    res.render('people/index', {allPeople: foundPeople})
+  })
 })
+
 
 
 module.exports = router
