@@ -25,17 +25,12 @@
                 <input type="number" name="age" placeholder="Enter Age" required>
             </label>
         </div> -->
-        <!-- Gender -->
+        <!-- Originally From? -->
         <div>
-            <!-- <label for="gender">
-                <p>Select Gender:</p>
-            <select name="gender">
-                <option value="" disabled selected>Choose One</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
-            </select>
-        </label> -->
+            <label for="originallyFrom" >
+                <p>Originally From?</p>
+                <input type="text" name="originallyFrom" placeholder="Enter Place" required>
+            </label>
         <div>
             <p>Select Gender:</p>
             <label for="Male">Male
@@ -91,23 +86,38 @@
         </label>
         </div>
 
-                <!-- Religion -->
-                <div>
-                    <label for="religion">
-                        <p>Religion</p>
-                    <select name="religion">
-                        <option value="" disabled selected>Choose One</option>
-                      <option value="Christian">Christian</option>
-                      <option value="Catholic">Catholic</option>
-                      <option value="Jewish">Jewish</option>
-                      <option value="Buddhist">Buddhist</option>
-                      <option value="Mormon">Mormon</option>
-                      <option value="Islamic">Islamic</option>
-                      <option value="Spiritual">Spiritual</option>
-                      <option value="Agnostic">Agnostic</option>
-                    </select>
-                </label>
-                </div>
+        <!-- Religion -->
+        <div>
+            <label for="religion">
+                <p>Religion</p>
+            <select name="religion">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Christian">Christian</option>
+                <option value="Catholic">Catholic</option>
+                <option value="Jewish">Jewish</option>
+                <option value="Buddhist">Buddhist</option>
+                <option value="Mormon">Mormon</option>
+                <option value="Islamic">Islamic</option>
+                <option value="Spiritual">Spiritual</option>
+                <option value="Agnostic">Agnostic</option>
+            </select>
+        </label>
+        </div>
+        <!-- Politics -->
+        <div>
+            <label for="politics">
+                <p>Political Views?</p>
+            <select name="politics">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Not Political">Not Political</option>
+                <option value="Liberal">Liberal</option>
+                <option value="Conservative">Conservative</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Other">Other</option>
+
+            </select>
+        </label>
+        </div>
 
                 <!-- Children -->
                 <div>
@@ -366,7 +376,7 @@
         
         </div>
 
-         <!-- Military -->
+         <!-- Prev MArriage -->
          <div>
             <label for="prevMarried">
                 <p>Were you married before?</p>
@@ -382,9 +392,140 @@
             <input type="number" name="prevMarriedAmount" placeholder="Enter Number" required>
         </label>
         </div>
+        <!-- Hobbies -->
+        <div>
+            <label for="hobbies" >
+                <p>Hobbies?</p>
+                <input type="text" name="hobbies" placeholder="Enter a Hobby"  required>
+            </label>
+        </div>
 
-        
+         <!-- Pets -->
+         <div>
+            <label for="pets">
+                <p>Do you have Pets?</p>
+            <select name="pets">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                
+            </select>
+        </label>
+        <fieldset>      
+            <legend>What kind of Pets do you have?</legend>      
+            <input type="checkbox" name="petTypes" value="Cats">Cats<br>      
+            <input type="checkbox" name="petTypes" value="Dogs">Dogs<br>      
+            <input type="checkbox" name="petTypes" value="Birds">Birds<br>      
+            <input type="checkbox" name="petTypes" value="Reptiles">Reptiles<br>         
+            <br>      
+                 
+        </fieldset> 
 
+        </div>
+
+         <!-- Books -->
+         <div>
+            <label for="books">
+                <p>Do you read Books?</p>
+            <select name="books">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                
+            </select>
+        </label>
+        <fieldset>      
+            <legend>What kind of Books do you read?</legend>      
+            <input type="checkbox" name="bookTypes" value="Action">Action<br>      
+            <input type="checkbox" name="bookTypes" value="Sci-Fi">Sci-Fi<br>      
+            <input type="checkbox" name="bookTypes" value="Romantic">Romantic<br>      
+            <input type="checkbox" name="bookTypes" value="Informative">Informative<br>         
+            <input type="checkbox" name="bookTypes" value="Thrillers">Thrillers<br>      
+            <input type="checkbox" name="bookTypes" value="Biographies">Biographies<br>      
+            <input type="checkbox" name="bookTypes" value="Mysteries">Mysteries<br>      
+      
+            <br>      
+                 
+        </fieldset> 
+        </div>
+         <!-- TV -->
+         <div>
+            <label for="tv">
+                <p>How Often do you watch TV?</p>
+            <select name="tv">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Rarely">Rarely</option>
+                <option value="Occasionally">Occasionally</option>
+                <option value="Frequently">Frequently</option>
+                
+            </select>
+        </label>
+        <fieldset>      
+            <legend>What kind of Shows do you Watch?</legend>      
+            <input type="checkbox" name="bookTypes" value="Action">Action<br>      
+            <input type="checkbox" name="bookTypes" value="Sci-Fi">Sci-Fi<br>      
+            <input type="checkbox" name="bookTypes" value="Romantic">Romantic<br>      
+            <input type="checkbox" name="bookTypes" value="Reality">Reality<br>           
+            <input type="checkbox" name="bookTypes" value="Comedies">Comedies<br>      
+  
+      
+            <br>      
+                 
+        </fieldset> 
+        </div>
+         <!-- Movies -->
+         <div>
+            <label for="movies">
+                <p>How Often do you watch Movies?</p>
+            <select name="movies">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Rarely">A Few Times a Year</option>
+                <option value="Occasionally">A Few Times a Month</option>
+                <option value="Frequently">A Few Times a Week</option>
+                
+            </select>
+        </label>
+  
+            <p>Favorite Genre?</p>    
+            <select name="movies">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Action">Action</option>
+                <option value="Reality">Reality</option>
+                <option value="Drama">Drama</option>
+                <option value="Comedy">Comedy</option>
+
+                
+            </select>
+                 
+        </div>
+<!-- Gamer-->
+<div>
+    <label for="gamer">
+        <p>Are you a Gamer?</p>
+    <select name="gamer">
+        <option value="" disabled selected>Choose One</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+
+    </select>
+</label>
+
+    <label for="gameGenre" >
+        <p>Fav Game Genre?</p>
+        <select name="gameGenre">
+            <option value="" disabled selected>Choose One</option>
+            <option value="Action">Action</option>
+            <option value="RPG">RPG</option>
+            <option value="FPS">FPS</option>
+            <option value="MMO">MMO</option>
+            <option value="Casual">Casual</option>
+
+            
+        </select>
+    </label>
+
+</div>
 
         <input id="questionnaire-submit" class="submit" type="submit" value="Submit">
     </form>
