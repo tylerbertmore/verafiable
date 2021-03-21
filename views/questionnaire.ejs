@@ -11,26 +11,6 @@
                 <input type="text" name="fullName" placeholder="Enter Full Name" required>
             </label>
         </div>
-        <!-- Number INPUT -->
-        <div>
-            <label for="age" > 
-                <p>Age</p>
-                <input type="number" name="age" placeholder="Enter Age" required>
-            </label>
-        </div>
-        <!-- SINGLE DROPDOWN INPUT -->
-        <div>
-            <label for="ethnicity">
-                <p>Choose your Ethnicity</p>
-            <select name="ethnicity" id="ethnicity">
-                <option value="" disabled selected>Choose One</option>
-              <option value="white">White</option>
-              <option value="black">Black</option>
-              <option value="asian">Asian</option>
-            </select>
-        </label>
-        </div>
-
         <!-- DATE -->
         <div>
             <label for="birthday" >
@@ -38,75 +18,163 @@
                 <input type="date" min="1903-01-02" max="2004-01-01" name="birthday" placeholder="Birthday" required>
             </label>
         </div>
-        <!-- OPEN ENDED -->
+        <!-- Number INPUT -->
+        <!-- <div>
+            <label for="age" > 
+                <p>Age</p>
+                <input type="number" name="age" placeholder="Enter Age" required>
+            </label>
+        </div> -->
+        <!-- Gender -->
         <div>
-            <label for="openEnded">
-                <p>Open Ended question</p>
-                <textarea id="openEnded" name="openEnded" rows="4" cols="50" placeholder="Enter an answer to an open ending question">
-                </textarea>
-            </label>
+            <label for="gender">
+                <p>Select Gender:</p>
+            <select name="gender">
+                <option value="" disabled selected>Choose One</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+        </label>
         </div>
-        <!-- hobbies -->
-        <p>Hobbies:</p>
-        <div class="multi-answers">
-            
-            <label for="hobbies1">
-                
-                
-                <select name="hobbies1" id="hobbies1">
-                    <option value="" disabled selected>Hobby 1</option>
-                    <option value="bowling">bowling</option>
-                    <option value="hiking">hiking</option>
-                    <option value="dancing">dancing</option>
-                    <option value="skating">skating</option>
-                    <option value="biking">biking</option>
-                    <option value="drinking">drinking</option>
-                  </select>
-            </label>
-            <label for="hobbies2">
-                
-                
-                <select name="hobbies2" id="hobbies2">
-                    <option value="" disabled selected>Hobby 2</option>
-                    <option value="bowling">bowling</option>
-                    <option value="hiking">hiking</option>
-                    <option value="dancing">dancing</option>
-                    <option value="skating">skating</option>
-                    <option value="biking">biking</option>
-                    <option value="drinking">drinking</option>
-                  </select>
-            </label>
-            <label for="hobbies3">
-                
-                
-                <select name="hobbies3" id="hobbies3">
-                    <option value="" disabled selected>Hobby 3</option>
-                    <option value="bowling">bowling</option>
-                    <option value="hiking">hiking</option>
-                    <option value="dancing">dancing</option>
-                    <option value="skating">skating</option>
-                    <option value="biking">biking</option>
-                    <option value="drinking">drinking</option>
-                  </select>
-            </label>
+        <!-- Seeking -->
+        <div>
+            <label for="seeking">
+                <p>Seeking:</p>
+            <select name="seeking">
+                <option value="" disabled selected>Choose One</option>
+              <option value="Men">Men</option>
+              <option value="Women">Women</option>
+              <option value="Both">Both</option>
+            </select>
+        </label>
+        </div>
+        <!-- ageRange -->
+        <div>
+            <label for="ageRange">
+                <p>Ideal Partner Age:</p>
+            <select name="ageRange">
+                <option value="" disabled selected>Choose One</option>
+              <option value="20-25">20-25</option>
+              <option value="25-30">25-30</option>
+              <option value="30-35">30-35</option>
+              <option value="35-40">35-40</option>
+              <option value="40-45">40-45</option>
+              <option value="45-50">45-50</option>
+              <option value="50-55">50-55</option>
+              <option value="60-65">60-65</option>
+            </select>
+        </label>
+        </div>
+        <!-- Ethnicity -->
+        <div>
+            <label for="ethnicity">
+                <p>Choose your Ethnicity</p>
+            <select name="ethnicity">
+                <option value="" disabled selected>Choose One</option>
+              <option value="White">White</option>
+              <option value="Black">Black</option>
+              <option value="Asian">Asian</option>
+              <option value="Hispanic">Hispanic</option>
+              <option value="Middle-Eastern">Middle-Eastern</option>
+            </select>
+        </label>
         </div>
 
-        <label for="movies">
-                <p>Movies</p>
-                <div class="select-and-text">
-                    
-                    <select name="movies" id="movies">
-                        <option value="" disabled selected>Movie Genres</option>
-                        <option value="dontlike">I dont like movies</option>
-                        <option value="horror">horror</option>
-                        <option value="action">action</option>
-                        <option value="sci-fi">sci fi</option>
-                        <option value="romance">romance</option>
-        
-                      </select>
-                      <input type="text" name="favMovie" placeholder="Favorite Movie?" required>
+                <!-- Religion -->
+                <div>
+                    <label for="religion">
+                        <p>Religion</p>
+                    <select name="religion">
+                        <option value="" disabled selected>Choose One</option>
+                      <option value="Christian">Christian</option>
+                      <option value="Catholic">Catholic</option>
+                      <option value="Jewish">Jewish</option>
+                      <option value="Buddhist">Buddhist</option>
+                      <option value="Mormon">Mormon</option>
+                      <option value="Islamic">Islamic</option>
+                      <option value="Spiritual">Spiritual</option>
+                      <option value="Agnostic">Agnostic</option>
+                    </select>
+                </label>
                 </div>
+
+                <!-- Children -->
+                <div>
+                    <label for="children">
+                        <p>Have Children</p>
+                    <select name="children">
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        
+                    </select>
+                </label>
+
+                    <label for="wantChildren">
+                        <p>Want Children</p>
+                    <select name="wantChildren">
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="Yes">Yes, I want Children</option>
+                        <option value="No">No, I don't want Children</option>
+                        <option value="Open">Maybe</option>
+                    </select>
+                </label>
+                
+                    <label for="stepParent">
+                        <p>Willing to be a Step Parent?</p>
+                    <select name="stepParent">
+                        <option value="" disabled selected>Choose One</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Open">Maybe</option>
+                    </select>
+                </label>
+                </div>
+        <!-- Alcohol -->
+        <div>
+            <label for="alcoholUse">
+                <p>Alcohol Consumption</p>
+            <select name="alcoholUse">
+                <option value="" disabled selected>Choose One</option>
+              <option value="Infrequently">Once in a While</option>
+              <option value="Occasionally">Occasionally</option>
+              <option value="Socially">Socially</option>
+              <option value="Often">Often</option>
+              <option value="Excessively">Excessively</option>
+            </select>
         </label>
+        </div>
+        <!-- Cigarette -->
+        <div>
+            <label for="cigaretteUse">
+                <p>Cigarette Use</p>
+            <select name="cigaretteUse">
+                <option value="" disabled selected>Choose One</option>
+              <option value="Infrequently">Once in a While</option>
+              <option value="Occasionally">Occasionally</option>
+              <option value="Socially">Socially</option>
+              <option value="Often">Often</option>
+              <option value="Excessively">Excessively</option>
+            </select>
+        </label>
+        </div>
+        <!-- Marijuana -->
+        <div>
+            <label for="marijuanaUse">
+                <p>Marijuana Usage</p>
+            <select name="marijuanaUse">
+                <option value="" disabled selected>Choose One</option>
+              <option value="Infrequently">Once in a While</option>
+              <option value="Occasionally">Occasionally</option>
+              <option value="Socially">Socially</option>
+              <option value="Often">Often</option>
+              <option value="Excessively">Excessively</option>
+            </select>
+        </label>
+        </div>
+        
+       
 
         <input id="questionnaire-submit" class="submit" type="submit" value="Submit">
     </form>

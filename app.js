@@ -126,12 +126,18 @@ app.get('/questionnaire', (req, res) => {
 app.post('/questionnaire', isLoggedIn, (req, res) => {
   db.Person.create(
     {fullName: req.body.fullName,
-       age: req.body.age, 
-       ethnicity: req.body.ethnicity,
+       gender: req.body.gender, 
+       seeking: req.body.seeking,
+       ageRange: req.body.ageRange,
        birthday: req.body.birthday,
-       openEnded: req.body.openEnded,
-       movies: req.body.movies,
-       favMovie: req.body.favMovie
+       ethnicity: req.body.ethnicity,
+       religion: req.body.religion,
+       children: req.body.children,
+       wantChildren: req.body.wantChildren,
+       stepParent: req.body.stepParent,
+       alcoholUse: req.body.alcoholUse,
+       cigaretteUse: req.body.cigaretteUse,
+       marijuanaUse: req.body.marijuanaUse
         }, (err, newPerson) =>{
     if(err){
       console.log(err)

@@ -8,37 +8,28 @@
         <th>Age</th>
         <th>Gender</th>
         <th>Seeking</th>
-        <th>Category</th>
-        <th>Category</th>
-        <th>Category</th>
-        <th>Category</th>
-        <th>Category</th>
-        <th>Category</th>
+        <th>Kids</th>
+        <th>Smoking</th>
+        <th>Drinking</th>
+        <th>Religion</th>
+        <th>Exercise</th>
+        <th>Pets</th>
     </tr>
+    <% allPeople.forEach(person => { %>
     <tr>
-        <td>John Doe</td>
-        <td>20</td>
-        <td>Male</td>
-        <td>Females</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
+        <td><%= person.fullName %></td>
+        <td><%= new Date().getFullYear() - person.birthday.getFullYear(); %></td>
+        <td><%= person.gender %></td>
+        <td><%= person.seeking %></td>
+        <td><%= person.children %></td>
+        <td><%= person.cigaretteUse %></td>
+        <td><%= person.alcoholUse %></td>
+        <td><%= person.religion %></td>
+        <td><%= person.exercise %></td>
+        <td><%= person.pets %></td>
     </tr>
-    <tr>
-        <td>Jane Doe</td>
-        <td>22</td>
-        <td>Female</td>
-        <td>Males</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
-    </tr>
+    <% }) %>
+
 </table>
 
 </main>
