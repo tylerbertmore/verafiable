@@ -27,7 +27,7 @@
         </div> -->
         <!-- Gender -->
         <div>
-            <label for="gender">
+            <!-- <label for="gender">
                 <p>Select Gender:</p>
             <select name="gender">
                 <option value="" disabled selected>Choose One</option>
@@ -35,7 +35,17 @@
               <option value="Female">Female</option>
               <option value="Other">Other</option>
             </select>
-        </label>
+        </label> -->
+        <div>
+            <p>Select Gender:</p>
+            <label for="Male">Male
+            <input type="radio" name="gender" id="Male" value="Male"></label>
+            <label for="Female">Female
+            <input type="radio" name="gender" id="Female" value="Female"></label>
+            <label for="Other">Other
+            <input type="radio" name="gender" id="Other" value="Other"></label>
+        </div>
+        
         </div>
         <!-- Seeking -->
         <div>
@@ -69,7 +79,7 @@
         <!-- Ethnicity -->
         <div>
             <label for="ethnicity">
-                <p>Choose your Ethnicity</p>
+                <p>Ethnicity</p>
             <select name="ethnicity">
                 <option value="" disabled selected>Choose One</option>
               <option value="White">White</option>
@@ -102,7 +112,7 @@
                 <!-- Children -->
                 <div>
                     <label for="children">
-                        <p>Have Children</p>
+                        <p>Do You Have Children?</p>
                     <select name="children">
                         <option value="" disabled selected>Choose One</option>
                         <option value="Yes">Yes</option>
@@ -112,12 +122,11 @@
                 </label>
 
                     <label for="wantChildren">
-                        <p>Want Children</p>
+                        <p>Do You Want Children?</p>
                     <select name="wantChildren">
                         <option value="" disabled selected>Choose One</option>
                         <option value="Yes">Yes, I want Children</option>
                         <option value="No">No, I don't want Children</option>
-                        <option value="Open">Maybe</option>
                     </select>
                 </label>
                 
@@ -127,7 +136,6 @@
                         <option value="" disabled selected>Choose One</option>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
-                        <option value="Open">Maybe</option>
                     </select>
                 </label>
                 </div>
@@ -137,6 +145,7 @@
                 <p>Alcohol Consumption</p>
             <select name="alcoholUse">
                 <option value="" disabled selected>Choose One</option>
+              <option value="Never">I don't Drink Alcohol</option>
               <option value="Infrequently">Once in a While</option>
               <option value="Occasionally">Occasionally</option>
               <option value="Socially">Socially</option>
@@ -151,6 +160,7 @@
                 <p>Cigarette Use</p>
             <select name="cigaretteUse">
                 <option value="" disabled selected>Choose One</option>
+              <option value="Never">I don't Smoke</option>
               <option value="Infrequently">Once in a While</option>
               <option value="Occasionally">Occasionally</option>
               <option value="Socially">Socially</option>
@@ -165,6 +175,7 @@
                 <p>Marijuana Usage</p>
             <select name="marijuanaUse">
                 <option value="" disabled selected>Choose One</option>
+              <option value="Never">I don't Smoke Marijuana</option>
               <option value="Infrequently">Once in a While</option>
               <option value="Occasionally">Occasionally</option>
               <option value="Socially">Socially</option>
@@ -173,8 +184,207 @@
             </select>
         </label>
         </div>
+        <!-- Exercise -->
+        <div>
+            <label for="exercise">
+                <p>Do you Exercise?</p>
+            <select name="exercise">
+                <option value="" disabled selected>Choose One</option>
+              <option value="Never">Never / Almost Never</option>
+              <option value="Monthly">A Few Times a Month</option>
+              <option value="Weekly">1-2 Times a Week</option>
+              <option value="Often">3-4 Times a Week</option>
+              <option value="Very Often">5-7 Times a Week</option>
+            </select>
+        </label>
+        </div>
+        <!-- Tattoos -->
+        <div>
+            <label for="tattoos">
+                <p>Tattoos?</p>
+            <select name="tattoos">
+                <option value="" disabled selected>Choose One</option>
+              <option value="Yes">Yes, I have Tattoos</option>
+              <option value="No">No, I have no Tattoos</option>
+
+            </select>
+        </label>
+        <fieldset>      
+            <legend>Where are your Tattoos?</legend>      
+            <input type="checkbox" name="tattooPlaces" value="Face">Face<br>      
+            <input type="checkbox" name="tattooPlaces" value="Neck">Neck<br>      
+            <input type="checkbox" name="tattooPlaces" value="Shoulders">Shoulders<br>      
+            <input type="checkbox" name="tattooPlaces" value="Hands">Hands<br>      
+            <input type="checkbox" name="tattooPlaces" value="Arms">Arms<br>      
+            <input type="checkbox" name="tattooPlaces" value="Legs">Legs<br>      
+            <input type="checkbox" name="tattooPlaces" value="Feet">Feet<br>      
+            <input type="checkbox" name="tattooPlaces" value="Back">Back<br>      
+            <input type="checkbox" name="tattooPlaces" value="Stomach">Stomach<br>      
+            <br>      
+                 
+        </fieldset> 
+        </div>
+        <!-- Partner Tattoos -->
+        <div>
+            <label for="partnerTattoos">
+                <p>Partner Tattoos?</p>
+            <select name="partnerTattoos">
+                <option value="" disabled selected>Choose One</option>
+              <option value="Yes">Yes, I'm okay with them</option>
+              <option value="No">No, I'm not okay with them</option>
+
+            </select>
+        </label>
+        </div>
         
-       
+        <!-- Piercings -->
+        <div>
+            <label for="piercings">
+                <p>Piercings?</p>
+            <select name="piercings">
+                <option value="" disabled selected>Choose One</option>
+              <option value="Yes">Yes, I have Piercings</option>
+              <option value="No">No, I have no Piercings</option>
+
+            </select>
+        </label>
+        <fieldset>      
+            <legend>Where are your Piercings?</legend>      
+            <input type="checkbox" name="piercingPlaces" value="Ears">Ears<br>      
+            <input type="checkbox" name="piercingPlaces" value="Nose">Nose<br>      
+            <input type="checkbox" name="piercingPlaces" value="Tongue">Tongue<br>      
+            <input type="checkbox" name="piercingPlaces" value="Eyebrow">Eyebrow<br>      
+            <input type="checkbox" name="piercingPlaces" value="Lip">Lip<br>      
+            <input type="checkbox" name="piercingPlaces" value="Unmentionable Places">Unmentionable Places<br>      
+            <br>      
+                 
+        </fieldset> 
+        </div>       
+
+        <!-- Social Media -->
+        <div>
+            <label for="socialMedia">
+                <p>Social Media Usage?</p>
+            <select name="socialMedia">
+                <option value="" disabled selected>Choose One</option>
+              <option value="Never">Never</option>
+              <option value="Rarely">Rarely</option>
+              <option value="Occasionally">Occasionally</option>
+              <option value="Daily">Daily</option>
+
+            </select>
+        </label>
+        </div>
+
+        <!-- Military -->
+        <div>
+            <label for="military">
+                <p>Were you in the Military?</p>
+            <select name="military">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                
+
+            </select>
+        </label>
+        </div>
+        <!-- Military Branch -->
+        <div>
+            <label for="militaryBranch">
+                <p>Branch of Service?</p>
+            <select name="militaryBranch">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Army">Army</option>
+                <option value="Marines">Marines</option>
+                <option value="Navy">Navy</option>
+                <option value="Air Force">Air Force</option>
+            </select>
+        </label>
+        </div>
+        <!-- Partner Military -->
+        <div>
+            <label for="partnerMilitary">
+                <p>Preference for partner's Military Experience?</p>
+            <select name="partnerMilitary">
+                <option value="" disabled selected>Choose One</option>
+                <option value="No Preference">No Preference</option>
+                <option value="Apartment">Prefer they were Military</option>
+                <option value="Prefer they did not serve">Prefer they did not serve</option>
+            </select>
+        </label>
+        </div>
+        <!-- Living Situation -->
+        <div>
+            <label for="livingSituation">
+                <p>Your living situation?</p>
+            <select name="livingSituation">
+                <option value="" disabled selected>Choose One</option>
+                <option value="House">House</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Other">Other</option>
+            </select>
+        </label>
+            <label for="livingStatus">
+                <p>Do you live alone / With others?</p>
+            <select name="livingStatus">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Alone">Alone</option>
+                <option value="With Roommates">With Roommates</option>
+                <option value="With Parents">With Parents</option>
+                <option value="Other">Other</option>
+            </select>
+        </label>
+        <label for="areaOfTown">
+            <p>Your Area of Town?</p>
+        <select name="areaOfTown">
+            <option value="" disabled selected>Choose One</option>
+            <option value="Henderson">Henderson</option>
+            <option value="Summerlin">Summerlin</option>
+            <option value="North Las Vegas">North Las Vegas</option>
+            <option value="Southern Highlands">Southern Highlands</option>
+            <option value="Other">Other</option>
+            </select>
+            </label>
+        </div>
+        <!-- Outdoorsy-->
+        <div>
+            <label for="outdoorsy">
+                <p>Outdoorsy?</p>
+            <select name="outdoorsy">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+
+            </select>
+        </label>
+        
+            <label for="outdoorActivities" >
+                <p>Fav Outdoor Activities?</p>
+                <input type="text" name="outdoorActivities" placeholder="Enter Activities" required>
+            </label>
+        
+        </div>
+
+         <!-- Military -->
+         <div>
+            <label for="prevMarried">
+                <p>Were you married before?</p>
+            <select name="prevMarried">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                
+            </select>
+        </label>
+        <label for="prevMarriedAmount" >
+            <p>How many times?</p>
+            <input type="number" name="prevMarriedAmount" placeholder="Enter Number" required>
+        </label>
+        </div>
+
+        
+
 
         <input id="questionnaire-submit" class="submit" type="submit" value="Submit">
     </form>

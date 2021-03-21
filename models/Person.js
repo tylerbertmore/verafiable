@@ -7,6 +7,7 @@ const personSchema = new mongoose.Schema({
   birthday: Date,
   ethnicity: String,
   religion: String,
+  seeking: String,
   children: String,
   wantChildren: String,
   stepParent: String,
