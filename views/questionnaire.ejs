@@ -6,9 +6,15 @@
     <form id="questionnaire-form" action="/questionnaire" method="POST">
         <!-- STRING INPUT -->
         <div>
-            <label for="fullName" >
-                <p>Full Name</p>
-                <input type="text" name="fullName" placeholder="Enter Full Name" required>
+            <label for="firstName" >
+                <p>First Name</p>
+                <input type="text" name="firstName" placeholder="First Name" required>
+            </label>
+        </div>
+        <div>
+            <label for="lastName" >
+                <p>Last Name</p>
+                <input type="text" name="lastName" placeholder="Last Name" required>
             </label>
         </div>
         <!-- DATE -->
@@ -462,11 +468,11 @@
         </label>
         <fieldset>      
             <legend>What kind of Shows do you Watch?</legend>      
-            <input type="checkbox" name="bookTypes" value="Action">Action<br>      
-            <input type="checkbox" name="bookTypes" value="Sci-Fi">Sci-Fi<br>      
-            <input type="checkbox" name="bookTypes" value="Romantic">Romantic<br>      
-            <input type="checkbox" name="bookTypes" value="Reality">Reality<br>           
-            <input type="checkbox" name="bookTypes" value="Comedies">Comedies<br>      
+            <input type="checkbox" name="tvTypes" value="Action">Action<br>      
+            <input type="checkbox" name="tvTypes" value="Sci-Fi">Sci-Fi<br>      
+            <input type="checkbox" name="tvTypes" value="Romantic">Romantic<br>      
+            <input type="checkbox" name="tvTypes" value="Reality">Reality<br>           
+            <input type="checkbox" name="tvTypes" value="Comedies">Comedies<br>      
   
       
             <br>      
@@ -487,7 +493,7 @@
         </label>
   
             <p>Favorite Genre?</p>    
-            <select name="movies">
+            <select name="favMovieGenre">
                 <option value="" disabled selected>Choose One</option>
                 <option value="Sci-Fi">Sci-Fi</option>
                 <option value="Action">Action</option>
@@ -511,9 +517,9 @@
     </select>
 </label>
 
-    <label for="gameGenre" >
+    <label for="favGameGenre" >
         <p>Fav Game Genre?</p>
-        <select name="gameGenre">
+        <select name="favGameGenre">
             <option value="" disabled selected>Choose One</option>
             <option value="Action">Action</option>
             <option value="RPG">RPG</option>
