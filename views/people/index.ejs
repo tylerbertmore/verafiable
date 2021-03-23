@@ -17,7 +17,7 @@
     </tr>
     <% allPeople.forEach(person => { %>
     <tr>
-        <td><%= person.fullName %></td>
+        <td><%= person.firstName %> <%= person.lastName %></td>
         <td><%= new Date().getFullYear() - person.birthday.getFullYear(); %></td>
         <td><%= person.gender %></td>
         <td><%= person.seeking %></td>

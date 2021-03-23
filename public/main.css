@@ -305,6 +305,50 @@ table {
     overflow: scroll;
   }
 
+
+  /* ---------------------------------------------------
+                       questionnaire                
+  --------------------------------------------------- */
+  .question-category{
+      display: flex;
+    align-items: flex-start;
+      flex-wrap: wrap;
+      border: black 2px solid;
+      margin-top: 2em;
+      position: relative;
+      padding-top: 2em;
+  }
+  .question-category h2{
+    position: absolute;
+    top: 0;
+    left: 1em;
+  }
+  .question-category input{
+      height: 6vh;
+  }
+  .question-category div{
+      margin:  1em;
+  }
+  #gender-container{
+      display: flex;
+  }
+  #gender-container input{
+      margin: .5em;
+      height: 4vh;
+  }
+  #gender-container p{
+      margin: .5em;
+  }
+
+  .multi-answer-container label{
+      display: flex;
+  }
+  .multi-answer-container p{
+      width: 49%;
+  }
+  .multi-answer-container input{
+      width:49%;
+  }
 /* ---------------------------------------------------
                      signup - login                
 --------------------------------------------------- */
