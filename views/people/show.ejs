@@ -2,9 +2,36 @@
 <main >
     <%- include('../partials/flash') %>
 
-    <h1><%= person.firstName %> <%= person.lastName %>'s Profile</h1>
+    <h1><%= person.firstName %>'s Profile</h1>
     <div class="profile-container">
+        <div class="profile-top">
+            <div class="profile-pic">
+                <img src="/images/default-profile.jpeg">
+                <button id="profile-edit-btn">Edit Profile</button>
+            </div>
+            <div class="profile-overview">
+                <h2>Overview</h2>
+                <div class="profile-overview-text">
+                    <p><span>Name:</span> <%= person.firstName %> <%= person.lastName %></p>
+                    <p><span>Gender:</span> <%= person.gender %></p>
+                    <p><span>Age:</span> <%= new Date().getFullYear() - person.birthday.getFullYear(); %></p>
+                    <p><span>Seeking:</span> <%= person.seeking %> between <%= person.ageRange %></p>
+                    <p><span>Ethnicity: </span><%= person.ethnicity %></p>
+                    <p><span>Religion: </span><%= person.religion %></p>
+                    <p><span>Politics: </span><%= person.politics %></p>
+                    <p><span>Previously Married:</span> <%= person.prevMarried %></p>
+                    <p><span>Has Children:</span> <%= person.children %></p>
+                    <p><span>Wants Children: </span> <%= person.wantChildren %></p>
 
+                </div>
+            </div>
+        </div>
+        <div class="profile-section">
+            
+        </div>
+        <div class="profile-section">
+
+        </div>
     </div>
 </main>
 <%- include('../partials/footer') %>
