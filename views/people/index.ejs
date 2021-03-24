@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-<main id="people-index">
+<div id="people-index">
     <%- include('../partials/flash') %>
 
 <table>
@@ -19,8 +19,18 @@
     <tr>
         <td><a href="/people/<%= person.id %>"><%= person.firstName %> <%= person.lastName %></a></td>
         <td><%= new Date().getFullYear() - person.birthday.getFullYear(); %></td>
-        <td><%= person.gender %></td>
-        <td><%= person.seeking %></td>
+        <% if(person.gender === 'Male') { %> <td><i class="fas fa-mars"></i> Male</td>
+    <% } %>
+        <% if(person.gender === 'Female') { %><td> <i class="fas fa-venus"></i> Female</td>
+    <% } %>
+        <% if(person.gender === 'Other') { %><td> <i class="fas fa-transgender-alt"></i> Other</td>
+    <% } %>
+    <% if(person.seeking === 'Men') { %> <td><i class="fas fa-mars"></i> Men</td>
+    <% } %>
+        <% if(person.seeking === 'Women') { %><td> <i class="fas fa-venus"></i> Women</td>
+    <% } %>
+        <% if(person.seeking === 'Both') { %><td> <i class="fas fa-venus-mars"></i> Both</td>
+    <% } %>
         <td><%= person.children %></td>
         <td><%= person.cigaretteUse %></td>
         <td><%= person.alcoholUse %></td>
@@ -32,5 +42,5 @@
 
 </table>
 
-</main>
+</div>
 <%- include('../partials/footer') %>

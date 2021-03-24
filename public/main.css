@@ -29,9 +29,7 @@ section{
     align-items: center;
 }
 
-main{
-    min-height: 100vh;
-}
+
 /* ---------------------------------------------------
                      navbar                
 --------------------------------------------------- */
@@ -305,7 +303,21 @@ table {
     overflow: scroll;
   }
 
+  #people-index{
+      min-height: 100vh;
+  }
 
+  .fa-mars{
+      color: #89cff0;
+  }
+
+  .fa-venus{
+      color: hotpink;
+  }
+
+  .fa-venus-mars, .fa-transgender-alt{
+      color: rebeccapurple;
+  }
   /* ---------------------------------------------------
                        questionnaire                
   --------------------------------------------------- */
@@ -357,6 +369,8 @@ table {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    padding-top: 2em;
 }
 .login-signup-container input{
     height: 6vh;
