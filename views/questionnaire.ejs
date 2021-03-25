@@ -524,7 +524,7 @@
         
     </select>
 </label>
-<div class="multi-answer-container">
+<div class="multi-answer-container multi-row">
     <label for="bookTypes"><p>Action</p><input type="checkbox" name="bookTypes" value="Action"></label>     
     <label for="bookTypes"><p>Mystery</p><input type="checkbox" name="bookTypes" value="Mystery"></label>     
     <label for="bookTypes"><p>Sci-Fi</p><input type="checkbox" name="bookTypes" value="Sci-Fi"></label>    
@@ -548,7 +548,7 @@
                     
                 </select>
             </label>
-            <div class="multi-answer-container">
+            <div class="multi-answer-container multi-row">
                 <label for="petTypes"><p>Dogs</p><input type="checkbox" name="petTypes" value="Dogs"></label>     
                 <label for="petTypes"><p>Cats</p><input type="checkbox" name="petTypes" value="Cats"></label>     
                 <label for="petTypes"><p>Birds</p><input type="checkbox" name="petTypes" value="Birds"></label>    
@@ -587,7 +587,275 @@
 </div>
 
 
+<div class="question-category">
+    <h2 class="question-category-title">Profession</h2>
+    <div>
+        <label for="profession" >
+            <p>Profession</p>
+            <input type="text" name="profession" placeholder="Enter Profession">
+        </label>
+    </div>
+    <div>
+        <label for="professionLength">
+            <p>How long?</p>
+            <input type="number" name="professionLength" placeholder="In Years">
+    </label>
+    </div>
+    <div>
+        <label for="professionSchedule" >
+            <p>Work Schedule (Graveyard, Swing Shift, etc)</p>
+            <input type="text" name="professionSchedule" placeholder="Swing, Graveyard, etc.">
+        </label>
+    </div>
+</div>
+<div class="question-category open-ended-textarea">
+    <h2 class="question-category-title">Open Ended</h2>
+    <div>
+        <label for="threePhysicalTraits" >
+            <p>What are 3 Physical traits that are important to you?</p>
+            <textarea  name="threePhysicalTraits"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="partnerLooks" >
+            <p>What does your ideal partner look like?</p>
+            <textarea  name="partnerLooks"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="partnerType" >
+            <p>Do you have a type? If so, are you open to widening your search for a partner?</p>
+            <textarea  name="partnerType"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="threePersonalityTraits" >
+            <p>What are 3 Personality traits that are important to you?</p>
+            <textarea  name="threePersonalityTraits"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="whatDoYouWant" >
+            <p>What do you want in a match?</p>
+            <textarea  name="whatDoYouWant"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="dealBreakers" >
+            <p>What are 3 Deal Breakers to you?</p>
+            <textarea  name="dealBreakers"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="petPeeves" >
+            <p>What are 3 pet peeves of yours?</p>
+            <textarea  name="petPeeves"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="familyInVegas" >
+            <p>Do you have family/friends here in Vegas? How often do you see them?</p>
+            <textarea  name="familyInVegas"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="familyCloseness" >
+            <p>How close are you with your family? Do you typically introduce your partner to friends/family/coworkers early on?</p>
+            <textarea  name="familyCloseness"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <p>Are you a Heartbreaker?</p>
+        <label for="heartBreaker">
+            <select name="heartBreaker">
+                <option value="" disabled selected>Choose One</option>
+                <option value="true">Yes, I'm a Heartbreaker</option>
+                <option value="false">No, I'm usually the Heartbroken</option>
 
+            </select>
+        </label>
+    </div>
+    <div>
+        <label for="beenInLove" >
+            <p>How many times have you been in love?</p>
+            <input name="beenInLove" type="number" placeholder="0, 1, 2, ...">
+        </label>
+    </div>
+    <div>
+        <label for="intimacy" >
+            <p>How do you feel about intimacy?</p>
+            <textarea  name="intimacy"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="whenLastRelationship" >
+            <p>When did your last relationship end?</p>
+            <textarea  name="whenLastRelationship"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="whyLastRelationship" >
+            <p>Why did your last relationship end?</p>
+            <textarea  name="whyLastRelationship"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="threePersonalGoals" >
+            <p>What are 3 of your personal/work goals for this year?</p>
+            <textarea  name="threePersonalGoals"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="threeCharacterFlaws" >
+            <p>What are 3 of your flaws you want to improve on?</p>
+            <textarea  name="threeCharacterFlaws"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="threeThingsTable" >
+            <p>What are 3 things you bring to the table?</p>
+            <textarea  name="threeThingsTable"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="celebCrush" >
+            <p>Who is your celebrity crush?</p>
+            <textarea  name="celebCrush"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="holidays" >
+            <p>Do you enjoy celebrating holidays? Which ones are important to you?</p>
+            <textarea  name="holidays"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="lastBirthday" >
+            <p>What did you do for your last Birthday?</p>
+            <textarea  name="lastBirthday"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="dayOff" >
+            <p>What is a typical day off like for you?</p>
+            <textarea  name="dayOff"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="threeSelfLove" >
+            <p>What are 3 things you do to show yourself self love?</p>
+            <textarea  name="threeSelfLove"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="mentalHealth" >
+            <p>What is your current mental health status?</p>
+            <textarea  name="mentalHealth"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="threePastRelationshipIssues" >
+            <p>Describe 3 main issues with your last relationship?</p>
+            <textarea  name="threePastRelationshipIssues"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="perfectDate" >
+            <p>Perfect date?</p>
+            <textarea  name="perfectDate"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="idealFirstDate" >
+            <p>What would a potential match do on the first date to make you want to see them again?</p>
+            <textarea  name="idealFirstDate"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="cooking" >
+            <p>Do you enjoy cooking?</p>
+            <textarea  name="cooking"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="communicationStyle" >
+            <p>Describe your communication style. Are you a quick responder?</p>
+            <textarea  name="communicationStyle"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="reliable" >
+            <p>How reliable are you?</p>
+            <textarea  name="reliable"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="planner" >
+            <p>Are you a planner or more of a fly by the seat of your pants person?</p>
+            <textarea  name="planner"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="hygiene" >
+            <p>How important is hygiene/cleanliness? </p>
+            <textarea  name="hygiene"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="frequentSpot" >
+            <p>What is a most frequented spot in Las Vegas?</p>
+            <textarea  name="frequentSpot"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="fiveYearPlan" >
+            <p>If you could plan your future, where do you see yourself in 5 years?</p>
+            <textarea  name="fiveYearPlan"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <p>Are you the more dominant or submissive partner in a relationship?</p>
+        <label for="dominantSubmissive">
+            <select name="dominantSubmissive">
+                <option value="" disabled selected>Choose One</option>
+                <option value="Dominant">Dominant</option>
+                <option value="Submissive">Submissive</option>
+
+            </select>
+        </label>
+    </div>
+    <div>
+        <label for="adventurer" >
+            <p>Are you an adventurer/risk taker? What is one of the most risky things you’ve done?</p>
+            <textarea  name="adventurer"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="likeSports" >
+            <p>Are you into sports? Do you play? Favorite sport?</p>
+            <textarea  name="likeSports"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="littleKnownFact" >
+            <p>Something not many people know about you.</p>
+            <textarea  name="littleKnownFact"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="prizedPossesion" >
+            <p>Most prized possession/Who do you look up to?</p>
+            <textarea  name="prizedPossesion"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="extraInfo" >
+            <p>Anything else I should know about you or what you’re looking for in a partner? </p>
+            <textarea  name="extraInfo"  rows="4" cols="100" placeholder="Enter Response"></textarea>
+        </label>
+    </div>
+    
+</div>
          
     
 

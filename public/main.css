@@ -282,6 +282,26 @@ textarea{
     margin-bottom: 4em;
 }
 
+.open-ended-textarea{
+    width: 100%;
+}
+textarea{
+    width: 100%;
+}
+.multi-row{
+    display: flex;
+    align-items: center;
+}
+.multi-row label{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 1em;
+    font-size: 0.75em;
+}
+.multi-row p {
+    min-width: 100px;
+}
 /* ---------------------------------------------------
                      people styles                
 --------------------------------------------------- */
@@ -297,8 +317,9 @@ table {
     padding: 8px;
   }
   
-  tr:nth-child(even) {
-    background-color: #dddddd;
+  tr:nth-child(1) {
+    background-color: var(--black);
+    color: var(--secondary);
     width: 708px;
     overflow: scroll;
   }
@@ -440,11 +461,78 @@ main h1{
 
 .profile-section{
     display: flex;
+    flex-direction: column;
     width: 97%;
     min-height: 300px;
+    align-items: flex-start;
     border: 2px solid black;
     margin: 1em;
+    padding: 1em;
 }
+.profile-section h2{
+    margin-bottom: 1.5em;
+}
+.profile-section-text{
+    display: flex;
+    flex-wrap: wrap;
+}
+.profile-section-text p{
+    margin: 1em;
+    font-size: 1.25em;
+}
+.profile-section-text p>span{
+    font-weight: bold;
+}
+.profile-section i {
+    font-size: 5em;
+    margin: .25em;
+}
+
+.profile-section .fas:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltiptext{
+      font-size: 18px;
+  }
+
 /* ---------------------------------------------------
                      footer                
 --------------------------------------------------- */

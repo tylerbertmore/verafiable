@@ -22,15 +22,39 @@
                     <p><span>Previously Married:</span> <%= person.prevMarried %></p>
                     <p><span>Has Children:</span> <%= person.children %></p>
                     <p><span>Wants Children: </span> <%= person.wantChildren %></p>
+                    <p><span>Willing to be Step Parent: </span> <%= person.stepParent %></p>
 
                 </div>
             </div>
         </div>
         <div class="profile-section">
+            <h2>Recreation</h2>
+            <div class="profile-section-text">
+                <p><span>Hobbies: </span><%= person.hobbies1 %>, <%= person.hobbies2 %>, <%= person.hobbies3 %></p>
+                <p><span>Marijuana Use: </span><%= person.marijuanaUse %></p>
+                <p><span>Cigarette Use: </span><%= person.cigaretteUse %></p>
+                <p><span>Alcohol Use: </span><%= person.alcoholUse %></p>
+                <p><span>Exercise: </span><%= person.exercise %></p>
+                <p><span>Outdoorsy: </span><%= person.outdoorsy %></p>
+                <p><span>Bookworm: </span> <%= person.books %></p>
+                <p><span>Gamer: </span> <%= person.gamer %></p>
+            </div>
             
         </div>
         <div class="profile-section">
+            <h2>Recreation</h2>
+            <div class="personality-icons">
+                <i class="tooltip fas fa-cannabis"><span class="tooltiptext"><%= person.marijuanaUse %></span></i>
+                <i class="fas fa-beer"></i>
+                <i class="fas fa-smoking"></i>
+                
+                <i class="fas fa-book"></i>
+            </div>
+            <h2>Children</h2>
+            <div class="personality-icons">
+                <i class="tooltip fas fa-baby"></i>
 
+            </div>
         </div>
     </div>
 </main>
