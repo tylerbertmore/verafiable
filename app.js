@@ -88,7 +88,7 @@ app.post('/signup', async (req, res) => {
       req.login(registeredUser, err => {
           if(err) return console.log(err);
           req.flash('success', 'Successfully Registered!')
-          res.redirect('/people/index');
+          res.redirect('/people');
       })
   } catch(e){
       req.flash('error', e.message);
