@@ -385,6 +385,20 @@ textarea{
   .multi-answer-container input{
       width:49%;
   }
+
+  #questionnaire-submit{
+      height: 9vh;
+      background-color: steelblue;
+      color: white;
+      border-radius: 30px;
+      font-size: 2em;
+      width: 50%;
+      align-self: center;
+  }
+  #questionnaire-submit:hover{
+      cursor: pointer;
+      opacity: .8;
+  }
 /* ---------------------------------------------------
                      signup - login                
 --------------------------------------------------- */
@@ -464,10 +478,12 @@ main h1{
 
 .profile-section{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 97%;
     min-height: 300px;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-around;
     border: 2px solid black;
     margin: 1em;
     padding: 1em;
@@ -489,9 +505,10 @@ main h1{
 .profile-section i {
     font-size: 5em;
     margin: .25em;
+    margin-top: .5em;
 }
 
-.profile-section .fas:hover{
+.profile-section .fas:hover, .profile-section .far:hover{
     opacity: .7;
     cursor: pointer;
 }
@@ -536,6 +553,25 @@ main h1{
       font-size: 18px;
   }
 
+  .icon-container{
+      display: flex;
+      width: 400px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-top: 2em;
+  }
+
+  .icon-container-top, .icon-container-bottom{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .icon-text-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
 /* ---------------------------------------------------
                      footer                
 --------------------------------------------------- */

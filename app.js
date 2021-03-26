@@ -190,7 +190,7 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
        threeThingsTable: req.body.threeThingsTable,
        holidays: req.body.holidays,
        lastBirthday: req.body.lastBirthday,
-       dayOff: req.body,dayOff,
+       dayOff: req.body.dayOff,
        threeSelfLove: req.body.threeSelfLove,
        petPeeves: req.body.petPeeves,
        threePastRelationshipIssues: req.body.threePastRelationshipIssues,
