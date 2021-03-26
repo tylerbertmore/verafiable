@@ -144,6 +144,7 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
        exercise: req.body.exercise,
        tattoos: req.body.tattoos,
        partnerTattoos: req.body.tattoos,
+       partnerPiercings: req.body.partnerPiercings,
        piercings: req.body.piercings,
        piercingPlaces: req.body.piercingPlaces,
        tattooPlaces: req.body.tattooPlaces,

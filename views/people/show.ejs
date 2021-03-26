@@ -10,7 +10,12 @@
                 <button id="profile-edit-btn">Edit Profile</button>
             </div>
             <div class="profile-overview">
-                <h2>Overview</h2>
+                <div id="profile-header-btns">
+                    <button>Overview</button>
+                    <button>Info 2</button>
+                    <button>Info 3</button>
+                    <button>Info 4</button>
+                </div>
                 <div class="profile-overview-text">
                     <p><span>Name:</span> <%= person.firstName %> <%= person.lastName %></p>
                     <p><span>Gender:</span> <%= person.gender %></p>
@@ -19,34 +24,17 @@
                     <p><span>Ethnicity: </span><%= person.ethnicity %></p>
                     <p><span>Religion: </span><%= person.religion %></p>
                     <p><span>Politics: </span><%= person.politics %></p>
-                    <p><span>Previously Married:</span> <%= person.prevMarried %></p>
-                    <p><span>Has Children:</span> <%= person.children %></p>
-                    <p><span>Wants Children: </span> <%= person.wantChildren %></p>
-                    <p><span>Willing to be Step Parent: </span> <%= person.stepParent %></p>
+                    <p><span>Hobbies: </span><%= person.hobbies1 %>, <%= person.hobbies2 %>, <%= person.hobbies1 %></p>
+                    <p><span>Deal Breakers: </span><%= person.dealBreakers %></p>
+                    
 
                 </div>
             </div>
         </div>
-        <div class="profile-section">
-            <h2>Recreation</h2>
-            <div class="profile-section-text">
-                <p><span>Hobbies: </span><%= person.hobbies1 %>, <%= person.hobbies2 %>, <%= person.hobbies3 %></p>
-                <p><span>Marijuana Use: </span><%= person.marijuanaUse %></p>
-                <p><span>Cigarette Use: </span><%= person.cigaretteUse %></p>
-                <p><span>Alcohol Use: </span><%= person.alcoholUse %></p>
-                <p><span>Exercise: </span><%= person.exercise %></p>
-                <p><span>Outdoorsy: </span><%= person.outdoorsy %></p>
-                <p><span>Bookworm: </span> <%= person.books %></p>
-                <p><span>Gamer: </span> <%= person.gamer %></p>
-            </div>
-            
-        </div>
+        
         
         <div class="profile-section">
-            <!--------------------------------------------------->
-            <!--                     recreation                
-            <--------------------------------------------------->
-            
+            <h2>Personality</h2>
             <div class="icon-container">
                 <div class="icon-container-top">
                 <div class="icon-text-container">
@@ -54,89 +42,73 @@
                     <p>Marijuana Use</p>
                 </div>
                 <div class="icon-text-container">
-                    <i class="tooltip fas fa-beer"></i>
+                    <i class="tooltip fas fa-beer"><span class="tooltiptext"><%= person.alcoholUse %></span></i>
                     <p>Alcohol Use</p>
                 </div>
                 <div class="icon-text-container">
-                    <i class="tooltip fas fa-smoking"></i>
+                    <i class="tooltip fas fa-smoking"><span class="tooltiptext"><%= person.cigaretteUse %></span></i>
                     <p>Cigarettes</p>
                 </div>
             </div>
             <div class="icon-container-bottom">
                 <div class="icon-text-container">
-                    <i class="fas fa-network-wired"></i>
+                    <i class="tooltip fas fa-network-wired"><span class="tooltiptext"><%= person.socialMedia %></span></i>
                     <p>Social Media Use</p>
                 </div>
                 <div class="icon-text-container">
-                    <i class="tooltip fas fa-tv"></i>
+                    <i class="tooltip fas fa-tv"><span class="tooltiptext"><%= person.tv %></span></i>
                     <p>TV Watching</p>
                 </div>
                 <div class="icon-text-container">
-                    <i class="fas fa-gamepad"></i>
+                    <i class="tooltip fas fa-gamepad"><span class="tooltiptext"><%= person.gamer %></span></i>
                     <p>Gamer</p>
                 </div>
             </div>    
             </div>
-
-<!--------------------------------------------------->
-<!--                     kids / military               
-<--------------------------------------------------->
-
             <div class="icon-container">
                 <div class="icon-container-top">
                 <div class="icon-text-container">
-                    <i class="tooltip fas fa-baby"><span class="tooltiptext"><%= person.marijuanaUse %></span></i>
+                    <i class="tooltip fas fa-baby"><span class="tooltiptext"><%= person.wantChildren %></span></i>
                     <p>Wants Kids</p>
                 </div>
                 <div class="icon-text-container">
-                    <i class="tooltip fas fa-child"></i>
-                    <p>Kids</p>
+                    <i class="tooltip fas fa-child"><span class="tooltiptext"><%= person.children %></span></i>
+                    <p>Has Kids</p>
                 </div>
                 <div class="icon-text-container">
-                    <i class="tooltip fas fa-ring"></i>
+                    <i class="tooltip fas fa-ring"><span class="tooltiptext"><%= person.prevMarried %></span></i>
                     <p>Married Before</p>
                 </div>
-
-
             </div>
             <div class="icon-container-bottom">
                 <div class="icon-text-container">
-                    <i class="tooltip far fa-star"></i>
+                    <i class="tooltip far fa-star"><span class="tooltiptext"><%= person.military %></span></i>
                     <p>Military</p>
                 </div>
                 <div class="icon-text-container">
-                    <i class="tooltip fas fa-user-shield"></i>
+                    <i class="tooltip fas fa-user-shield"><span class="tooltiptext"><%= person.partnerMilitary %></span></i>
                     <p>Military Spouse</p>
                 </div>
-
-
             </div>    
             </div>
-
-            <!--------------------------------------------------->
-            <!--                     Outdoorsy                
-            <--------------------------------------------------->
-            
             <div class="icon-container">
                 <div class="icon-container-top">
                 <div class="icon-text-container">
-                    <i class="tooltip fas fa-leaf"><span class="tooltiptext"><%= person.marijuanaUse %></span></i>
+                    <i class="tooltip fas fa-leaf"><span class="tooltiptext"><%= person.outdoorsy %></span></i>
                     <p>Outdoorsy</p>
                 </div>
                 <div class="icon-text-container">
-                    <i class="fas fa-dumbbell"></i>
+                    <i class="tooltip fas fa-dumbbell"><span class="tooltiptext"><%= person.exercise %></span></i>
                     <p>Exercise</p>
                 </div>
                 <div class="icon-text-container">
-                    <i class="fas fa-book"></i>
+                    <i class="tooltip fas fa-book"><span class="tooltiptext"><%= person.books %></span></i>
                     <p>Bookworm</p>
                 </div>
-
-
             </div>
             <div class="icon-container-bottom">
                 <div class="icon-text-container">
-                    <i class="fas fa-paw"></i>
+                    <i class="tooltip fas fa-paw"><span class="tooltiptext"><%= person.pets %></span></i>
                     <p>Pets</p>
                 </div>
 
@@ -144,9 +116,27 @@
 
             </div>    
             </div>
-
-
         </div>
+        <div class="profile-section">
+            <h2>Tattoos & Body Art</h2>
+            <div class="profile-section-text">
+                <p><span>Piercings:  </span><%= person.piercings %></p>
+                <% if(person.piercings === 'Yes') { %>
+                    <p><span>Piercing Locations:  </span><%= person.piercingPlaces %></p>
+                    <% } %>
+                    <p><span>Okay with Partner Piercings?:  </span><%= person.partnerPiercings %></p>
+                <p><span>Tattoos:  </span><%= person.tattoos %></p>
+                <% if(person.tattoos === 'Yes') { %>
+                    <p><span>Tattoo Locations:  </span><%= person.tattooPlaces %></p>
+                    <% } %>
+                    <p><span>Okay with Partner Tattoos?:  </span><%= person.partnerTattoos %></p>
+                
+
+            </div>
+            
+        </div>
+        
     </div>
+    
 </main>
 <%- include('../partials/footer') %>
