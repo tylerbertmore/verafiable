@@ -29,6 +29,9 @@ section{
     align-items: center;
 }
 
+button:focus {
+    outline:0;
+}
 
 /* ---------------------------------------------------
                      navbar                
@@ -447,18 +450,24 @@ main h1{
 }
 #profile-header-btns{
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 #profile-header-btns button{
     height: 8vh;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 10px;
     border: none;
     background-color: white;
     border-top: solid white 2px;
     cursor: pointer;
     
+}
+.header-1{
+    border-top-left-radius: 30px;
 }
 #profile-header-btns button:hover{
     border-top: solid red 2px;
@@ -479,7 +488,8 @@ main h1{
     border-radius: 30px;
       background-color: white;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
+    overflow: auto;
+    }
 .profile-overview h2{
     font-size: 2em;
 }
@@ -608,6 +618,12 @@ main h1{
 /* ---------------------------------------------------
                      footer                
 --------------------------------------------------- */
+.hidden{
+    display: none;
+}
+#profile-header-btns .active{
+    border-top: solid red 2px;
+}
 
 footer{
    height: 20vh;

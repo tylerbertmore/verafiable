@@ -11,12 +11,13 @@
             </div>
             <div class="profile-overview">
                 <div id="profile-header-btns">
-                    <button>Overview</button>
-                    <button>Info 2</button>
-                    <button>Info 3</button>
-                    <button>Info 4</button>
+                    <button class="header-1 active">Overview</button>
+                    <button class="header-2">Career/Hobbies</button>
+                    <button class="header-3">Body Art</button>
+                    <button class="header-4">Info 4</button>
+                    <button class="header-5">Info 5</button>
                 </div>
-                <div class="profile-overview-text">
+                <div class="profile-overview-text hidden header-overview">
                     <p><span>Name:</span> <%= person.firstName %> <%= person.lastName %></p>
                     <p><span>Gender:</span> <%= person.gender %></p>
                     <p><span>Age:</span> <%= new Date().getFullYear() - person.birthday.getFullYear(); %></p>
@@ -28,6 +29,19 @@
                     <p><span>Deal Breakers: </span><%= person.dealBreakers %></p>
                     
 
+                </div>
+                <div class="profile-overview-text header-bodyart">
+                    <p><span>Piercings:  </span><%= person.piercings %></p>
+                    <% if(person.piercings === 'Yes') { %>
+                        <p><span>Piercing Locations:  </span><%= person.piercingPlaces %></p>
+                        <% } %>
+                        <p><span>Okay with Partner Piercings?:  </span><%= person.partnerPiercings %></p>
+                    <p><span>Tattoos:  </span><%= person.tattoos %></p>
+                    <% if(person.tattoos === 'Yes') { %>
+                        <p><span>Tattoo Locations:  </span><%= person.tattooPlaces %></p>
+                        <% } %>
+                        <p><span>Okay with Partner Tattoos?:  </span><%= person.partnerTattoos %></p>
+                    
                 </div>
             </div>
         </div>
@@ -117,24 +131,7 @@
             </div>    
             </div>
         </div>
-        <div class="profile-section">
-            <h2>Tattoos & Body Art</h2>
-            <div class="profile-section-text">
-                <p><span>Piercings:  </span><%= person.piercings %></p>
-                <% if(person.piercings === 'Yes') { %>
-                    <p><span>Piercing Locations:  </span><%= person.piercingPlaces %></p>
-                    <% } %>
-                    <p><span>Okay with Partner Piercings?:  </span><%= person.partnerPiercings %></p>
-                <p><span>Tattoos:  </span><%= person.tattoos %></p>
-                <% if(person.tattoos === 'Yes') { %>
-                    <p><span>Tattoo Locations:  </span><%= person.tattooPlaces %></p>
-                    <% } %>
-                    <p><span>Okay with Partner Tattoos?:  </span><%= person.partnerTattoos %></p>
-                
 
-            </div>
-            
-        </div>
         
     </div>
     
