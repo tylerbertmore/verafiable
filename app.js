@@ -175,6 +175,8 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
        profession: req.body.profession,
        professionLength: req.body.professionLength,
        professionSchedule: req.body.professionSchedule,
+       relationshipGoal: req.body.relationshipGoal,
+       loveLanguage: req.body.loveLanguage,
        threePhysicalTraits: req.body.threePhysicalTraits,
        threePersonalityTraits: req.body.threePersonalityTraits,
        whatDoYouWant: req.body.whatDoYouWant,
@@ -208,8 +210,13 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
        perfectDate: req.body.perfectDate,
        cooking: req.body.cooking,
        likeSports: req.body.likeSports,
+       likeTravel: req.body.likeTravel,
+       travelledOutsideUS: req.body.travelledOutsideUS,
+       travelledTo: req.body.travelledTo,
        littleKnownFact: req.body.littleKnownFact,
        prizedPossesion: req.body.prizedPossesion,
+       trulyValue: req.body.trulyValue,
+       criminalHistory: req.body.criminalHistory,
        extraInfo: req.body.extraInfo
 
 

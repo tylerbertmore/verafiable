@@ -443,6 +443,8 @@ main h1{
     flex-wrap: wrap;
     width: 100%;
     margin: 1em;
+    
+    justify-content: center;
 }
 .profile-pic{
     width: 360px;
@@ -452,7 +454,7 @@ main h1{
     display: flex;
     align-items: center;
     width: 100%;
-    background-color: #f6f6f6;
+    background-color: #fcfcfc;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
@@ -461,10 +463,15 @@ main h1{
     font-size: 1.5em;
     padding: 10px;
     border: none;
-    background-color: white;
-    border-top: solid white 2px;
+    background-color:#fcfcfc;
+    border-top: solid #fcfcfc 2px;
     cursor: pointer;
-    
+
+}
+
+#profile-header-btns .active{
+    border-top: solid red 2px;
+    background-color: white;
 }
 .header-1{
     border-top-left-radius: 30px;
@@ -621,9 +628,7 @@ main h1{
 .hidden{
     display: none;
 }
-#profile-header-btns .active{
-    border-top: solid red 2px;
-}
+
 
 footer{
    height: 20vh;

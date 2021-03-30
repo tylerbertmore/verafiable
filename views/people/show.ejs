@@ -4,20 +4,23 @@
 
     <h1><%= person.firstName %>'s Profile</h1>
     <div class="profile-container">
+        
         <div class="profile-top">
             <div class="profile-pic">
                 <img src="/images/default-profile.jpeg">
                 <button id="profile-edit-btn">Edit Profile</button>
             </div>
+
             <div class="profile-overview">
+                
                 <div id="profile-header-btns">
-                    <button class="header-1 active">Overview</button>
-                    <button class="header-2">Career/Hobbies</button>
-                    <button class="header-3">Body Art</button>
-                    <button class="header-4">Info 4</button>
-                    <button class="header-5">Info 5</button>
+                    <button class="header-btn header-1 active">Overview</button>
+                    <button class="header-btn header-2">Personality</button>
+                    <button class="header-btn header-3">Career/Hobbies</button>
+                    <button class="header-btn header-4">Body Art</button>
+                    <button class="header-btn header-5">Looking For</button>
                 </div>
-                <div class="profile-overview-text hidden header-overview">
+                <div class="profile-overview-text header-overview">
                     <p><span>Name:</span> <%= person.firstName %> <%= person.lastName %></p>
                     <p><span>Gender:</span> <%= person.gender %></p>
                     <p><span>Age:</span> <%= new Date().getFullYear() - person.birthday.getFullYear(); %></p>
@@ -25,12 +28,30 @@
                     <p><span>Ethnicity: </span><%= person.ethnicity %></p>
                     <p><span>Religion: </span><%= person.religion %></p>
                     <p><span>Politics: </span><%= person.politics %></p>
+                    <p><span>Originally From: </span><%= person.originallyFrom %></p>
+                    <p><span>Living In: </span><%= person.areaOfTown %></p>
+                    
+
+                    
+
+                </div>
+                <div class="profile-overview-text hidden header-career">
+                    <p><span>Career: </span><%= person.profession %></p>
+
                     <p><span>Hobbies: </span><%= person.hobbies1 %>, <%= person.hobbies2 %>, <%= person.hobbies1 %></p>
+
+                </div>
+                <div class="profile-overview-text hidden header-lookingfor">
+                    <p><span>General Type: </span><%= person.partnerType %></p>
+                    <p><span>Desired Physical Traits </span><%= person.threePhysicalTraits %></p>
                     <p><span>Deal Breakers: </span><%= person.dealBreakers %></p>
                     
 
                 </div>
-                <div class="profile-overview-text header-bodyart">
+                <div class="profile-overview-text hidden header-personality">
+                    <p><span><%= person.dominantSubmissive %></span></p>
+                </div>
+                <div class="profile-overview-text hidden header-bodyart">
                     <p><span>Piercings:  </span><%= person.piercings %></p>
                     <% if(person.piercings === 'Yes') { %>
                         <p><span>Piercing Locations:  </span><%= person.piercingPlaces %></p>
@@ -44,11 +65,12 @@
                     
                 </div>
             </div>
+            
         </div>
         
         
         <div class="profile-section">
-            <h2>Personality</h2>
+
             <div class="icon-container">
                 <div class="icon-container-top">
                 <div class="icon-text-container">
@@ -136,4 +158,5 @@
     </div>
     
 </main>
+<script src="/helpers.js"></script>
 <%- include('../partials/footer') %>
