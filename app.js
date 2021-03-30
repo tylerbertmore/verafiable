@@ -132,6 +132,7 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
        seeking: req.body.seeking,
        ageRange: req.body.ageRange,
        birthday: req.body.birthday,
+       frequentSpot: req.body.frequentSpot,
        ethnicity: req.body.ethnicity,
        religion: req.body.religion,
        politics: req.body.politics,
@@ -184,8 +185,9 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
        partnerLooks: req.body.partnerLooks,
        familyCloseness: req.body.familyCloseness,
        beenInLove: req.body.beenInLove,
-       heartbreaker: req.body.heartbreaker,
+       heartBreaker: req.body.heartBreaker,
        intimacy: req.body.intimacy,
+       mentalHealth: req.body.mentalHealth,
        whenLastRelationship: req.body.whenLastRelationship,
        whyLastRelationship: req.body.whyLastRelationship,
        threePersonalGoals: req.body.threePersonalGoals,
@@ -217,7 +219,8 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
        prizedPossesion: req.body.prizedPossesion,
        trulyValue: req.body.trulyValue,
        criminalHistory: req.body.criminalHistory,
-       extraInfo: req.body.extraInfo
+       extraInfo: req.body.extraInfo,
+       celebCrush: req.body.celebCrush
 
 
         }, (err, newPerson) =>{

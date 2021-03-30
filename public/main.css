@@ -322,6 +322,7 @@ table {
     margin-bottom: 4em;
 }
 
+
 .open-ended-textarea{
     width: 100%;
 }
@@ -398,9 +399,21 @@ textarea{
       width: 50%;
       align-self: center;
   }
-  #questionnaire-submit:hover{
+  #questionnaire-submit:hover, #submit-edit:hover{
       cursor: pointer;
       opacity: .8;
+  }
+  #submit-edit{
+    height: 6vh;
+    background-color: steelblue;
+    color: white;
+    border-radius: 30px;
+    font-size: 1.25em;
+    width: 30%;
+    align-self: center;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
   }
 /* ---------------------------------------------------
                      signup - login                
