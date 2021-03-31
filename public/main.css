@@ -329,6 +329,11 @@ table {
 textarea{
     width: 100%;
 }
+.multi-row-container{
+    display: flex;
+    flex-direction: column;
+
+}
 .multi-row{
     display: flex;
     align-items: center;
@@ -340,6 +345,8 @@ textarea{
     margin-left: 1em;
     font-size: 0.75em;
 }
+
+
 .multi-row p {
     min-width: 100px;
 }
@@ -366,6 +373,7 @@ textarea{
   .question-category input{
       height: 6vh;
   }
+
   .question-category div{
       margin:  1em;
   }
@@ -414,6 +422,9 @@ textarea{
     position: fixed;
     bottom: 1em;
     right: 1em;
+  }
+  .email-input{
+      width: 400px;
   }
 /* ---------------------------------------------------
                      signup - login                

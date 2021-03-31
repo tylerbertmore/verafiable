@@ -9,7 +9,8 @@ const LocalStrategy = require('passport-local');
 require('dotenv').config();
 const PORT = process.env.PORT;
 const ctrl = require('./controllers');
-const db = require('./models');   
+const db = require('./models'); 
+ 
 
 
 // VIEW ENGINE
@@ -128,12 +129,17 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
     {firstName: req.body.firstName,
       lastName: req.body.lastName,
        gender: req.body.gender,
+       phoneNumber: req.body.phoneNumber,
+       clientEmail: req.body.clientEmail,
+       height: req.body.height,
+       bodyType: req.body.bodyType,
        originallyFrom: req.body.originallyFrom,
        seeking: req.body.seeking,
        ageRange: req.body.ageRange,
        birthday: req.body.birthday,
        frequentSpot: req.body.frequentSpot,
        ethnicity: req.body.ethnicity,
+       partnerEthnicity: req.body.partnerEthnicity,
        religion: req.body.religion,
        politics: req.body.politics,
        children: req.body.children,
@@ -142,9 +148,12 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
        alcoholUse: req.body.alcoholUse,
        cigaretteUse: req.body.cigaretteUse,
        marijuanaUse: req.body.marijuanaUse,
+       marijuanaTypes: req.body.marijuanaTypes,
        exercise: req.body.exercise,
        tattoos: req.body.tattoos,
-       partnerTattoos: req.body.tattoos,
+       totalTattoos: req.body.totalTattoos,
+       totalPiercings: req.body.totalPiercings,
+       partnerTattoos: req.body.partnerTattoos,
        partnerPiercings: req.body.partnerPiercings,
        piercings: req.body.piercings,
        piercingPlaces: req.body.piercingPlaces,
@@ -156,10 +165,14 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
        livingSituation: req.body.livingSituation,
        livingStatus: req.body.livingStatus,
        areaOfTown: req.body.areaOfTown,
+       verafiedJoinReason: req.body.verafiedJoinReason,
+       mixers: req.body.mixers,
+       verafiedSuggestions: req.body.verafiedSuggestions,
+       selfEsteem: req.body.selfEsteem,
+       siblings: req.body.siblings,
        outdoorsy: req.body.outdoorsy,
        outdoorActivities: req.body.outdoorActivities,
        prevMarried: req.body.prevMarried,
-       prevMarriedAmount: req.body.prevMarriedAmount,
        hobbies1: req.body.hobbies1,
        hobbies2: req.body.hobbies2,
        hobbies3: req.body.hobbies3,
@@ -174,6 +187,7 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
        gamer: req.body.gamer,
        favGameGenre: req.body.favGameGenre,
        profession: req.body.profession,
+       professionIndustry: req.body.professionIndustry,
        professionLength: req.body.professionLength,
        professionSchedule: req.body.professionSchedule,
        relationshipGoal: req.body.relationshipGoal,

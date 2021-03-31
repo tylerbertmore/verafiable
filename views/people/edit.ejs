@@ -35,7 +35,26 @@
             <label for="Other"><p>Other</p>
             <input type="radio" name="gender" id="Other" value="Other"></label>
         </div> -->
-
+        <div>
+            <label for="height" >
+                <p>Height</p>
+                <input type="text" name="height" placeholder="5'11, 6'1, etc." value="<%= person.height %>" required>
+            </label>
+        </div>
+        <div>
+            <label for="bodyType">
+                <p>Body Type:</p>
+            <select name="bodyType">
+                <option value="<%= person.bodyType %>"  selected><%= person.bodyType %></option>
+              <option value="Slim">Slim</option>
+              <option value="Average">Average</option>
+              <option value="Athletic">Athletic</option>
+              <option value="Curvy">Curvy</option>
+              <option value="A Little Extra">A Little Extra</option>
+              <option value="Tons of Fun-more to love">Tons of Fun-more to love</option>
+            </select>
+        </label>
+        </div>
 <!-- Seeking -->
 <div>
     <label for="seeking">
