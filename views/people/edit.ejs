@@ -106,21 +106,107 @@
         </div>
         
     </div>
+    <div class="question-category">
+        <h2 class="question-category-title">Contact</h2>
+        <div>
+            <label for="phoneNumber" >
+                <p>Phone Number</p>
+                <input type="text" value="<%= person.phoneNumber %>" name="phoneNumber" placeholder="(702) 555-2211">
+            </label>
+        </div>
+        <div>
+            <label for="clientEmail" >
+                <p>Email Address</p>
+                <input class="email-input" value="<%= person.clientEmail %>" type="email" name="clientEmail" placeholder="john@gmail.com">
+            </label>
+        </div>
+    </div>
+    <div class="question-category">
+        <h2 class="question-category-title">Verafied Logistics</h2>
+        <div>
+            <label for="relationshipGoal">
+                <p>What are you looking for in a relationship?</p>
+            <select name="relationshipGoal">
+                <option value="<%= person.relationshipGoal %>"  selected><%= person.relationshipGoal %></option>
+                <option value="Serious Relationship">Serious Relationship</option>
+                <option value="Friend">Friend</option>
+                <option value="Friends With Benefits">Friends With Benefits</option>
+                <option value="Something Casual">Something Casual</option>
+                <option value="I Don't Know">I Don't Know</option>
+            </select>
+        </label>
+        </div>
+        <div>
+            <label for="verafiedJoinReason" >
+                <p>Why did you join Verafied?</p>
+                <textarea  name="verafiedJoinReason"  rows="4" cols="100" placeholder="Enter Response"><%= person.verafiedJoinReason %></textarea>
+            </label>
+        </div>
+
+        <div>
+            <label for="mixers">
+                <p>Are you interested in doing meetups/mixers?</p>
+            <select name="mixers">
+                <option value="<%= person.mixers %>" selected><%= person.mixers %></option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+
+            </select>
+        </label>
+        </div>
+        <div>
+            <label for="verafiedSuggestions" >
+                <p>What other services would you like to see Verafied offer?</p>
+                <textarea  name="verafiedSuggestions"  rows="4" cols="100" placeholder="Enter Response"><%= person.verafiedSuggestions %></textarea>
+            </label>
+        </div>
+        <div>
+            <label for="selfEsteem" >
+                <p>Give me insight into your self-esteem. How do you feel about yourself?</p>
+                <textarea  name="selfEsteem"  rows="4" cols="100" placeholder="Enter Response"><%= person.selfEsteem %></textarea>
+            </label>
+        </div>
+    </div>
+<div class="question-category">
+    <h2 class="question-category-title">Family</h2>
+    <div>
+        <label for="siblings" >
+            <p>Do you have siblings? If so, how many?</p>
+            <textarea  name="siblings"  rows="4" cols="100" placeholder="Yes, I have one brother/ No, I'm an only child"><%= person.siblings %></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="familyInVegas" >
+            <p>Do you have family/friends here in Vegas? How often do you see them?</p>
+            <textarea  name="familyInVegas"  rows="4" cols="100" placeholder="Enter Response"><%= person.familyInVegas %></textarea>
+        </label>
+    </div>
+    <div>
+        <label for="familyCloseness" >
+            <p>How close are you with your family? Do you typically introduce your partner to friends/family/coworkers early on?</p>
+            <textarea  name="familyCloseness"  rows="4" cols="100" placeholder="Enter Response"><%= person.familyCloseness %></textarea>
+        </label>
+    </div>
+</div>
 
 
-       <div class="question-category">
-        <h2 class="question-category-title">Religion, Politics, Ethnicity</h2>
-<!-- Ethnicity -->
+<div class="question-category">
+<h2 class="question-category-title">Religion, Politics, Ethnicity</h2>
+
+        <!-- Ethnicity -->
 <div>
     <label for="ethnicity">
         <p>Ethnicity</p>
     <select name="ethnicity">
         <option value="<%= person.ethnicity %>"  selected><%= person.ethnicity %></option>
-      <option value="White">White</option>
-      <option value="Black">Black</option>
-      <option value="Asian">Asian</option>
-      <option value="Hispanic">Hispanic</option>
-      <option value="Middle-Eastern">Middle-Eastern</option>
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+        <option value="Asian">Asian</option>
+        <option value="Hispanic">Hispanic</option>
+        <option value="Middle-Eastern">Middle-Eastern</option>
+        <option value="Pacific Islander">Pacific Islander</option>
+        <option value="Mixed">Mixed</option>
+        <option value="Prefer Not To Answer">Prefer Not To Answer</option>
     </select>
 </label>
 </div>
@@ -131,6 +217,7 @@
         <p>Religion</p>
     <select name="religion">
         <option value="<%= person.religion %>"  selected><%= person.religion %></option>
+        <option value="Atheist">Atheist</option>
         <option value="Christian">Christian</option>
         <option value="Catholic">Catholic</option>
         <option value="Jewish">Jewish</option>
@@ -152,12 +239,25 @@
         <option value="Liberal">Liberal</option>
         <option value="Conservative">Conservative</option>
         <option value="Moderate">Moderate</option>
-        <option value="Other">Other</option>
+        <option value="Prefer Not to Answer">Prefer Not to Answer</option>
 
     </select>
 </label>
 </div>
-       </div>
+</div>
+<!-- <div class="multi-answer-container">
+    <div class="multi-row-container">
+    <p>Desired Partner Ethnicity:</p>
+    <div class="multi-row">
+    <label for="partnerEthnicity"><p>Open</p><input type="checkbox" name="partnerEthnicity" value="Open"></label>    
+    <label for="partnerEthnicity"><p>White</p><input type="checkbox" name="partnerEthnicity" value="White"></label>     
+    <label for="partnerEthnicity"><p>Black</p><input type="checkbox" name="partnerEthnicity" value="Black"></label>     
+    <label for="partnerEthnicity"><p>Asian</p><input type="checkbox" name="partnerEthnicity" value="Asian"></label>    
+    <label for="partnerEthnicity"><p>Hispanic</p><input type="checkbox" name="partnerEthnicity" value="Hispanic"></label>      
+    <label for="partnerEthnicity"><p>Middle-Eastern</p><input type="checkbox" name="partnerEthnicity" value="Middle-Eastern"></label>    
+    <label for="partnerEthnicity"><p>Pacific Islander</p><input type="checkbox" name="partnerEthnicity" value="Pacific Islander"></label>      
+    <label for="partnerEthnicity"><p>Mixed</p><input type="checkbox" name="partnerEthnicity" value="Mixed"></label>     
+</div> -->
         
 <div class="question-category">
  <!-- Children -->
@@ -171,7 +271,7 @@
         <option value="No">No</option>
         <option value="Once">Yes, once</option>
         <option value="Twice">Yes, twice</option>
-        <option value="Three+">Yes, three or more times</option>
+        <option value="Three or More times">Yes, three or more times</option>
         
     </select>
 </label>
@@ -189,6 +289,9 @@
         <option value="<%= person.children %>"  selected><%= person.children %></option>
         <option value="Yes">Yes</option>
         <option value="No">No</option>
+        <option value="Unable to Have Children">Unable to Have Children</option>
+        <option value="Yes, and I want More">Yes, and I want More</option>
+        <option value="Yes, and I Don't want More">Yes, and I Don't want More</option>
         
     </select>
 </label>
@@ -210,6 +313,7 @@
         <option value="<%= person.stepParent %>" selected><%= person.stepParent %></option>
         <option value="Yes">Yes</option>
         <option value="No">No</option>
+        <option value="Depends On the situation">Depends On the situation</option>
     </select>
 </label>
 </div>
@@ -218,7 +322,89 @@
 
 <div class="question-category">
     <h2 class="question-category-title">Vices & Body Art</h2>
+  <!-- Tattoos -->
+<div>
+    <label for="tattoos">
+        <p>Tattoos?</p>
+    <select name="tattoos">
+        <option value="<%= person.tattoos %>"  selected><%= person.tattoos %></option>
+      <option value="Yes">Yes, I have Tattoos</option>
+      <option value="No">No, I have no Tattoos</option>
+
+    </select>
+</label>  
+</div>
+<div>
+    <label for="totalTattoos">
+        <p>How many do you have?</p>
+        <input type="number" name="totalTattoos" placeholder="# of Tattoos" value="<%= person.totalTattoos %>">
+</label>
+</div>
+    <!-- Partner Tattoos -->
+    <div>
+        <label for="partnerTattoos">
+            <p>Partner Tattoos?</p>
+        <select name="partnerTattoos">
+            <option value="<%= person.partnerTattoos %>" selected><%= person.partnerTattoos %></option>
+          <option value="Yes">Yes, I'm okay with them</option>
+          <option value="No">No, I'm not okay with them</option>
     
+        </select>
+    </label>
+</div>
+<!-- <div class="multi-answer-container">
+    <label for="tattooPlaces"><p>Face</p><input type="checkbox" name="tattooPlaces" value="Face"></label>     
+    <label for="tattooPlaces"><p>Neck</p><input type="checkbox" name="tattooPlaces" value="Neck"></label>     
+    <label for="tattooPlaces"><p>Shoulder(s)</p><input type="checkbox" name="tattooPlaces" value="Shoulders"></label>    
+    <label for="tattooPlaces"><p>Hand(s)</p><input type="checkbox" name="tattooPlaces" value="Hands"></label>      
+    <label for="tattooPlaces"><p>Arm(s)</p><input type="checkbox" name="tattooPlaces" value="Arms"></label>    
+    <label for="tattooPlaces"><p>Leg(s)</p><input type="checkbox" name="tattooPlaces" value="Legs"></label>      
+    <label for="tattooPlaces"><p>Foot/Feet</p><input type="checkbox" name="tattooPlaces" value="Feet"></label>     
+    <label for="tattooPlaces"><p>Back</p><input type="checkbox" name="tattooPlaces" value="Back"></label>    
+    <label for="tattooPlaces"><p>Stomach</p><input type="checkbox" name="tattooPlaces" value="Stomach"></label>
+</div> -->
+
+<!-- Piercings -->
+<div>
+    <label for="piercings">
+        <p>Piercings?</p>
+    <select name="piercings">
+        <option value="<%= person.piercings %>"  selected><%= person.piercings %></option>
+      <option value="Yes">Yes, I have Piercings</option>
+      <option value="No">No, I have no Piercings</option>
+
+    </select>
+</label>
+     <!-- <div class="multi-answer-container">
+
+         <label for="piercingPlaces"><p>Ear(s)</p><input type="checkbox" name="piercingPlaces" value="Ears">     </label>
+         <label for="piercingPlaces"><p>Nose</p><input type="checkbox" name="piercingPlaces" value="Nose">   </label> 
+         <label for="piercingPlaces"><p>Tongue</p><input type="checkbox" name="piercingPlaces" value="Tongue">    </label>
+         <label for="piercingPlaces"><p>Eyebrow(s)</p><input type="checkbox" name="piercingPlaces" value="Eyebrow">   </label>  
+         <label for="piercingPlaces"><p>Lip</p><input type="checkbox" name="piercingPlaces" value="Lip">    </label>
+         <label for="piercingPlaces"><p>Privates</p><input type="checkbox" name="piercingPlaces" value="Privates">   </label>  
+     </div> -->
+         
+
+    </div>
+    <div>
+        <label for="totalPiercings">
+            <p>How many do you have?</p>
+            <input type="number" name="totalPiercings" placeholder="# of Piercings" value="<%= person.totalPiercings %>">
+    </label>
+    </div>
+<!-- Partner piercings -->
+<div>
+    <label for="partnerPiercings">
+        <p>Partner Piercings?</p>
+    <select name="partnerPiercings">
+        <option value="<%= person.partnerPiercings %>"  selected><%= person.partnerPiercings %></option>
+      <option value="Yes">Yes, I'm okay with them</option>
+      <option value="No">No, I'm not okay with them</option>
+
+    </select>
+</label>
+</div>
 <!-- Alcohol -->
 <div>
     <label for="alcoholUse">
@@ -255,88 +441,25 @@
         <p>Marijuana Usage</p>
     <select name="marijuanaUse">
         <option value="<%= person.marijuanaUse %>"  selected><%= person.marijuanaUse %></option>
-      <option value="Never">I don't Smoke Marijuana</option>
-      <option value="Infrequently">Once in a While</option>
-      <option value="Occasionally">Occasionally</option>
-      <option value="Socially">Socially</option>
-      <option value="Often">Often</option>
-      <option value="Excessively">Excessively</option>
+        <option value="Never">I don't Use Marijuana</option>
+        <option value="Infrequently">Once in a While</option>
+        <option value="Occasionally">Occasionally</option>
+        <option value="Socially">Socially</option>
+        <option value="Often">Often</option>
+        <option value="Excessively">Excessively</option>
     </select>
 </label>
-</div>
-<!-- Tattoos -->
-<div>
-    <label for="tattoos">
-        <p>Tattoos?</p>
-    <select name="tattoos">
-        <option value="<%= person.tattoos %>"  selected><%= person.tattoos %></option>
-      <option value="Yes">Yes, I have Tattoos</option>
-      <option value="No">No, I have no Tattoos</option>
-
-    </select>
-</label>
-<!-- <div class="multi-answer-container">
-    <label for="tattooPlaces"><p>Face</p><input type="checkbox" name="tattooPlaces" value="Face"></label>     
-    <label for="tattooPlaces"><p>Neck</p><input type="checkbox" name="tattooPlaces" value="Neck"></label>     
-    <label for="tattooPlaces"><p>Shoulder(s)</p><input type="checkbox" name="tattooPlaces" value="Shoulders"></label>    
-    <label for="tattooPlaces"><p>Hand(s)</p><input type="checkbox" name="tattooPlaces" value="Hands"></label>      
-    <label for="tattooPlaces"><p>Arm(s)</p><input type="checkbox" name="tattooPlaces" value="Arms"></label>    
-    <label for="tattooPlaces"><p>Leg(s)</p><input type="checkbox" name="tattooPlaces" value="Legs"></label>      
-    <label for="tattooPlaces"><p>Foot/Feet</p><input type="checkbox" name="tattooPlaces" value="Feet"></label>     
-    <label for="tattooPlaces"><p>Back</p><input type="checkbox" name="tattooPlaces" value="Back"></label>    
-    <label for="tattooPlaces"><p>Stomach</p><input type="checkbox" name="tattooPlaces" value="Stomach"></label>
-</div> -->
-       
-</div>
-
-
-<!-- Piercings -->
-<div>
-    <label for="piercings">
-        <p>Piercings?</p>
-    <select name="piercings">
-        <option value="<%= person.piercings %>"  selected><%= person.piercings %></option>
-      <option value="Yes">Yes, I have Piercings</option>
-      <option value="No">No, I have no Piercings</option>
-
-    </select>
-</label>
-     
-     <!-- <div class="multi-answer-container">
-
-         <label for="piercingPlaces"><p>Ear(s)</p><input type="checkbox" name="piercingPlaces" value="Ears">     </label>
-         <label for="piercingPlaces"><p>Nose</p><input type="checkbox" name="piercingPlaces" value="Nose">   </label> 
-         <label for="piercingPlaces"><p>Tongue</p><input type="checkbox" name="piercingPlaces" value="Tongue">    </label>
-         <label for="piercingPlaces"><p>Eyebrow(s)</p><input type="checkbox" name="piercingPlaces" value="Eyebrow">   </label>  
-         <label for="piercingPlaces"><p>Lip</p><input type="checkbox" name="piercingPlaces" value="Lip">    </label>
-         <label for="piercingPlaces"><p>Privates</p><input type="checkbox" name="piercingPlaces" value="Privates">   </label>  
-     </div> -->
+<!-- </div>
+<div class="multi-answer-container">
+    <div class="multi-row-container">
+    <p>How do you use Marijuana:</p>
+    <div class="multi-row">
+    <label for="marijuanaTypes"><p>Smoking</p><input type="checkbox" name="marijuanaTypes" value="Smoking"></label>    
+    <label for="marijuanaTypes"><p>Edibles</p><input type="checkbox" name="marijuanaTypes" value="Edibles"></label>     
+    <label for="marijuanaTypes"><p>CBD</p><input type="checkbox" name="marijuanaTypes" value="CBD"></label>     
+    <label for="marijuanaTypes"><p>Oils</p><input type="checkbox" name="marijuanaTypes" value="Oils"></label>    
          
-
-    </div>
-    <!-- Partner Tattoos -->
-<div>
-    <label for="partnerTattoos">
-        <p>Partner Tattoos?</p>
-    <select name="partnerTattoos">
-        <option value="<%= person.partnerTattoos %>" selected><%= person.partnerTattoos %></option>
-      <option value="Yes">Yes, I'm okay with them</option>
-      <option value="No">No, I'm not okay with them</option>
-
-    </select>
-</label>
-
-<!-- Partner piercings -->
-
-    <label for="partnerPiercings">
-        <p>Partner Piercings?</p>
-    <select name="partnerPiercings">
-        <option value="<%= person.partnerPiercings %>"  selected><%= person.partnerPiercings %></option>
-      <option value="Yes">Yes, I'm okay with them</option>
-      <option value="No">No, I'm not okay with them</option>
-
-    </select>
-</label>
+</div> -->
 </div>
 </div>   
 <div class="question-category">
@@ -543,14 +666,7 @@
         
     </select>
 </label>
-<!-- <div class="multi-answer-container multi-row">
-    <label for="bookTypes"><p>Action</p><input type="checkbox" name="bookTypes" value="Action"></label>     
-    <label for="bookTypes"><p>Mystery</p><input type="checkbox" name="bookTypes" value="Mystery"></label>     
-    <label for="bookTypes"><p>Sci-Fi</p><input type="checkbox" name="bookTypes" value="Sci-Fi"></label>    
-    <label for="bookTypes"><p>Romance</p><input type="checkbox" name="bookTypes" value="Romance"></label>    
-    <label for="bookTypes"><p>Non-Fiction</p><input type="checkbox" name="bookTypes" value="Non-Fiction"></label>    
 
-</div> -->
 </div>
 </div>
 <div class="question-category">
@@ -612,7 +728,12 @@
             </div> -->
             </div>
 <!-- Living Situation -->
-
+<div>
+    <label for="partnerPets" >
+        <p>Are you okay with your partner having pets? Do you have any allergies?</p>
+        <textarea  name="partnerPets"  rows="4" cols="100" placeholder="Yes, I'm okay with everything except birds/ No, I'm allergic to dogs."><%= person.partnerPets %></textarea>
+    </label>
+</div>
 <div>
     <label for="livingSituation">
         <p>Your living situation?</p>
@@ -644,6 +765,12 @@
 <div class="question-category">
     <h2 class="question-category-title">Profession</h2>
     <div>
+        <label for="professionIndustry" >
+            <p>Profession Industry</p>
+            <input type="text" name="professionIndustry" value="<%= person.professionIndustry %>" placeholder="Finance, Hospitality, etc.">
+        </label>
+    </div>
+    <div>
         <label for="profession" >
             <p>Profession</p>
             <input type="text" value="<%= person.profession %>" name="profession" placeholder="Enter Profession">
@@ -652,7 +779,7 @@
     <div>
         <label for="professionLength">
             <p>How long?</p>
-            <input type="number" name="professionLength" value="<%= person.professionLength %>" placeholder="In Years">
+            <input type="text" name="professionLength" value="<%= person.professionLength %>" placeholder="1 month, 1 year, etc.">
     </label>
     </div>
     <div>
@@ -664,19 +791,6 @@
 </div>
 <div class="question-category open-ended-textarea">
     <h2 class="question-category-title">Open Ended</h2>
-    <div>
-        <label for="relationshipGoal">
-            <p>What are you looking for?</p>
-        <select name="relationshipGoal">
-            <option value="<%= person.relationshipGoal %>"  selected><%= person.relationshipGoal %></option>
-            <option value="Serious Relationship">Serious Relationship</option>
-            <option value="Friend">Friend</option>
-            <option value="Friends With Benefits">Friends With Benefits</option>
-            <option value="Something Casual">Something Casual</option>
-            <option value="I Don't Know">I Don't Know</option>
-        </select>
-    </label>
-    </div>
     <div>
         <label for="loveLanguage">
             <p>How do you show love/ prefer to be loved?</p>
@@ -732,18 +846,7 @@
             <textarea  name="petPeeves"  rows="4" cols="100"  placeholder="Enter Response"><%= person.petPeeves %></textarea>
         </label>
     </div>
-    <div>
-        <label for="familyInVegas" >
-            <p>Do you have family/friends here in Vegas? How often do you see them?</p>
-            <textarea  name="familyInVegas"  rows="4" cols="100"  placeholder="Enter Response"><%= person.familyInVegas %></textarea>
-        </label>
-    </div>
-    <div>
-        <label for="familyCloseness" >
-            <p>How close are you with your family? Do you typically introduce your partner to friends/family/coworkers early on?</p>
-            <textarea  name="familyCloseness"  rows="4"  cols="100" placeholder="Enter Response"><%= person.familyCloseness %></textarea>
-        </label>
-    </div>
+    
     <div>
         <p>Are you a Heartbreaker?</p>
         <label for="heartBreaker">

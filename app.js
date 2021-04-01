@@ -178,6 +178,7 @@ app.post('/questionnaire', isLoggedIn, (req, res) => {
        hobbies3: req.body.hobbies3,
        pets: req.body.pets,
        petTypes: req.body.petTypes,
+       partnerPets: req.body.partnerPets,
        books: req.body.books,
        bookTypes: req.body.bookTypes,
        tv: req.body.tv,

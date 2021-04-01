@@ -54,6 +54,7 @@ const personSchema = new mongoose.Schema({
   hobbies3: String,
   pets: String,
   petTypes: Array,
+  partnerPets: String,
   books: String,
   bookTypes: Array,
   tv: String,
