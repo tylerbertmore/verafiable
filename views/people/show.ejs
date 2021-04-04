@@ -7,9 +7,21 @@
         
         <div class="profile-top">
             <div class="profile-pic">
-                <img src="/<%= person.uploadedImages[0].path %>">
+                <div class="profile-carousel-container">
+                    <% if(person.uploadedImages){ %>
+                    <img src="/<%= person.uploadedImages[0].path %>">
+                    <% } else { %>
+                        <img src="/images/default-profile.jpeg">
+                        <% } %>
+                    <div class="profile-carousel-track">
+                        <img src="/<%= person.uploadedImages[1].path %>">
+                        <img src="/<%= person.uploadedImages[2].path %>">
+                        <img src="/<%= person.uploadedImages[3].path %>">
+                        <img src="/<%= person.uploadedImages[4].path %>">
+                    </div>
+                </div>
+                
                 <div class="edit-btns">
-
                     <a href="<%= person.id %>/edit"><button id="profile-edit-btn">Edit Profile</button></a>
                     <a href="<%= person.id %>/pictures"><button id="profile-pic-btn">Add Pictures</button></a>
                 </div>

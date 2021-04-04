@@ -474,6 +474,25 @@ main h1{
     width: 360px;
     height: 360px;
 }
+.profile-carousel-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profile-carousel-container img{
+    max-width: 300px;
+    margin-bottom: 1em;
+}
+.profile-carousel-track{
+    display: flex;
+}
+
+.profile-carousel-track img{
+    max-width: 75px;
+    max-height: 75px;
+    margin: 10px;
+}
 #profile-header-btns{
     display: flex;
     align-items: center;
@@ -506,7 +525,7 @@ main h1{
 .profile-pic{
     display: flex;
     flex-direction: column;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 .profile-pic button{
     font-size: 1.25em;
@@ -541,7 +560,30 @@ main h1{
 }
 .edit-btns{
     display: flex;
+    margin-top: 1em;
+    justify-content: space-around;
+    align-items: center;
+    width: 360px;
 }
+.edit-btns a{
+    width: 125px;
+    height: 50px;
+}
+#profile-pic-btn:hover, #profile-edit-btn:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+#profile-pic-btn, #profile-edit-btn{
+    height: 50px;
+    width: 125px;
+    background-color: steelblue;
+    color: white;
+    border-radius: 30px;
+    font-size: 1em;
+    padding: 10px;
+    
+}
+
 .profile-section{
     display: flex;
     flex-direction: row;
@@ -703,4 +745,11 @@ footer .fa-twitter:hover{
 }
 footer .fa-tiktok:hover{
     color: #69C9D0;
+}
+
+@media (max-width: 1103px) {
+    .profile-overview{
+        width: 97%;
+        margin-left: 0;
+    }
 }
