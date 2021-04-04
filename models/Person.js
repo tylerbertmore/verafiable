@@ -31,6 +31,7 @@ const personSchema = new mongoose.Schema({
   tattoos: String,
   totalTattoos: {type: Number, default: 0},
   totalPiercings: {type: Number, default: 0},
+  uploadedImages: Array,
   tattooPlaces: Array,
   partnerTattoos: String,
   piercings: String,
@@ -111,12 +112,11 @@ const personSchema = new mongoose.Schema({
   whatDoYouWant: String,
   loveLanguage: String,
   relationshipGoal: String,
-  userImgOne: String,
-  userImgTwo: String,
-  userImgThree: String,
-  userImgFour: String,
-  userImgFive: String,
-  userVideo: String,
+  uploadedImgOne: String,
+  uploadedImgTwo: String,
+  uploadedImgThree: String,
+  uploadedImgFour: String,
+  uploadedImgFive: String
 
 }, {timestamps: true})
 

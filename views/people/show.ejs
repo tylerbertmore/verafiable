@@ -7,8 +7,12 @@
         
         <div class="profile-top">
             <div class="profile-pic">
-                <img src="/images/default-profile.jpeg">
-                <a href="<%= person.id %>/edit"><button id="profile-edit-btn">Edit Profile</button></a>
+                <img src="/<%= person.uploadedImages[0].path %>">
+                <div class="edit-btns">
+
+                    <a href="<%= person.id %>/edit"><button id="profile-edit-btn">Edit Profile</button></a>
+                    <a href="<%= person.id %>/pictures"><button id="profile-pic-btn">Add Pictures</button></a>
+                </div>
             </div>
 
             <div class="profile-overview">

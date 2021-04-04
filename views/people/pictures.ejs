@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+<div id="questionnaire">
+    <%- include('../partials/flash') %>
+<form id="questionnaire-form" action="/people/<%= person._id %>/pictures" method="POST" enctype="multipart/form-data">
+    <div class="question-category">
+        <h2 class="question-category-title">Upload Pictures</h2>
+        <p>Hold Shift and Click on all the files</p>
+        <input name="uploadedImages" type="file" multiple>
+    </div>
+    <input id="submit-edit" class="submit" type="submit" value="Add Pictures">
+</form>
+
+</div>
+
+<%- include('../partials/footer') %> 

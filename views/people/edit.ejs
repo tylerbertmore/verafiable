@@ -4,6 +4,12 @@
     
     
     <form id="questionnaire-form" action="/people/<%= person._id %>?_method=PUT" method="POST">
+        <div class="question-category">
+            <h2 class="question-category-title">Upload Pictures</h2>
+            
+            <input type="file" name="uploadedImageOne" value="uploading_img">
+        </div>
+        
         <!-- STRING INPUT -->
         <div class="question-category" id="basic-info">
             <h2 class="question-category-title">Basic Info</h2>

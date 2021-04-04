@@ -539,7 +539,9 @@ main h1{
 .profile-overview-text p>span{
     font-weight: bold;
 }
-
+.edit-btns{
+    display: flex;
+}
 .profile-section{
     display: flex;
     flex-direction: row;
