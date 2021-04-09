@@ -280,12 +280,7 @@
     </select>
 </label>
 </div>
-<div>
-<label for="prevMarriedAmount" >
-    <p>How many times?</p>
-    <input type="number" value="<%= person.prevMarriedAmount %>" name="prevMarriedAmount" placeholder="Enter Number">
-</label>
-</div>
+
  <div>
     <label for="children">
         <p>Do You Have Children?</p>
@@ -1058,9 +1053,13 @@
          
     
 
-        <input id="submit-edit" class="submit" type="submit" value="Confirm Changes">
-    </form>
+       
+<input id="submit-edit" class="submit" type="submit" value="Confirm Changes">
 
+    </form>
+    <form class="delete-form" action="/people/<%= person._id %>?_method=DELETE" method="post">
+        <input id="submit-delete" class="btn-danger" type="submit" value="Delete Client">
+    </form>
 
 </div>
 <%- include('../partials/footer') %> 

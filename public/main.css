@@ -302,6 +302,36 @@ table {
     align-items: center;
     background-color: #e0e0e0;
 }
+#disclaimer{
+    border: gray 2px solid;
+    border-radius: 30px;
+    padding: 1em;
+    max-height: 500px;
+    overflow: scroll;
+    margin-top: 3em;
+}
+
+/* Designing for scroll-bar */
+#disclaimer::-webkit-scrollbar {
+    border-radius: 30px;
+}
+#terms-of-service{
+    display: flex;
+    justify-content: center;
+}
+#terms-of-service input{
+    width: 30%;
+}
+#e-sig{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#e-sig input{
+    width: 40%;
+    margin-left: 3em;
+
+}
 #questionnaire form{
     display: flex;
     flex-direction: column;
@@ -407,7 +437,7 @@ textarea{
       width: 50%;
       align-self: center;
   }
-  #questionnaire-submit:hover, #submit-edit:hover{
+  #questionnaire-submit:hover, #submit-edit:hover, #submit-delete:hover{
       cursor: pointer;
       opacity: .8;
   }
@@ -423,6 +453,19 @@ textarea{
     bottom: 1em;
     right: 1em;
   }
+  #submit-delete{
+    height: 6vh;
+    background-color: red;
+    color: white;
+    border-radius: 30px;
+    font-size: 1.25em;
+    width: 30%;
+    align-self: center;
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+  }
+
   .email-input{
       width: 400px;
   }

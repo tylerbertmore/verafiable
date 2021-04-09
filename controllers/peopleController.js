@@ -104,6 +104,15 @@ router.post('/:personId/pictures',upload.array('uploadedImages', 5), isLoggedIn,
   )
 })
 
+// delete account from database
+router.delete('/:personId', isLoggedIn, (req, res) => {
+  db.Person.findByIdAndDelete(req.params.personId, (err, deleted) => {
+      if(err) return console.log(err);
+      req.flash('error', 'Person successfully deleted');
+      res.redirect('/people');
+  })
+})
+
 
 
 module.exports = router
