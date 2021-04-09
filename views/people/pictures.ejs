@@ -1,4 +1,7 @@
 <%- include('../partials/header') %>
+<script>
+    document.title = `Verafied™ - Upload Pics to <%= person.firstName %>'s Profile` 
+    </script>
 <div id="questionnaire">
     <%- include('../partials/flash') %>
 <form id="questionnaire-form" action="/people/<%= person._id %>/pictures" method="POST" enctype="multipart/form-data">

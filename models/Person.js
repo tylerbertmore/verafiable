@@ -115,6 +115,18 @@ const personSchema = new mongoose.Schema({
     {
       "path" : "uploads/default/default-profile-one.jpeg",
   },
+    {
+      "path" : "uploads/default/default-profile-two.jpeg",
+  },
+    {
+      "path" : "uploads/default/default-profile-three.jpeg",
+  },
+    {
+      "path" : "uploads/default/default-profile-four.jpeg",
+  },
+    {
+      "path" : "uploads/default/default-profile-five.jpeg",
+  },
 ]}
 
 }, {timestamps: true})

@@ -137,7 +137,7 @@ router.post('/', isLoggedIn, (req, res) => {
     }
     console.log(newPerson)
   })
-  req.flash('success', 'Person Successfully Added');
+  req.flash('success', 'Person Successfully Added, Refresh the Page to See The New Person');
   res.redirect('/people/')
 });
 

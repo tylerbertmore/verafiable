@@ -1,6 +1,9 @@
 <%- include('../partials/header') %>
 <main >
     <%- include('../partials/flash') %>
+    <script>
+        document.title = `Verafied™ - <%= person.firstName %>'s Profile` 
+        </script>
 
     <h1><%= person.firstName %>'s Profile</h1>
     <div class="profile-container">
