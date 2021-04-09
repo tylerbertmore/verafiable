@@ -9,6 +9,13 @@ const headerCareer = document.querySelector('.header-career');
 const headerPersonality = document.querySelector('.header-personality');
 const headerLookingFor = document.querySelector('.header-lookingfor');
 const headerBtns = document.getElementsByClassName('.header-btn');
+const carouselImageZero = document.querySelector('#carousel-img-zero');
+const carouselImageOne = document.querySelector('#carousel-img-one');
+const carouselImageTwo = document.querySelector('#carousel-img-two');
+const carouselImageThree = document.querySelector('#carousel-img-three');
+const carouselImageFour = document.querySelector('#carousel-img-four');
+const profileImageTop = document.querySelector('#profile-img-top');
+const profileImageContainer = document.querySelector('#profile-img-container');
 
 
 headerOne.addEventListener('click', () => {
@@ -75,5 +82,53 @@ headerFive.addEventListener('click', () => {
 	headerLookingFor.classList = 'profile-overview-text  header-lookingfor';
 
 })
+
+
+carouselImageZero.addEventListener('click', () => {
+	carouselImageOne.classList.value = '';
+	carouselImageTwo.classList.value = '';
+	carouselImageThree.classList.value = '';
+	carouselImageFour.classList.value = '';
+	carouselImageZero.classList.add('active');
+	profileImageTop.setAttribute('src', carouselImageZero.src);
+	profileImageContainer.setAttribute('href', carouselImageZero.src);
+})
+carouselImageOne.addEventListener('click', () => {
+	carouselImageZero.classList.value = '';
+	carouselImageTwo.classList.value = '';
+	carouselImageThree.classList.value = '';
+	carouselImageFour.classList.value = '';
+	carouselImageOne.classList.add('active');
+	profileImageTop.setAttribute('src', carouselImageOne.src);
+	profileImageContainer.setAttribute('href', carouselImageOne.src);
+})
+carouselImageTwo.addEventListener('click', () => {
+	carouselImageZero.classList.value = '';
+	carouselImageOne.classList.value = '';
+	carouselImageThree.classList.value = '';
+	carouselImageFour.classList.value = '';
+	carouselImageTwo.classList.add('active');
+	profileImageTop.setAttribute('src', carouselImageTwo.src);
+	profileImageContainer.setAttribute('href', carouselImageTwo.src);
+})
+carouselImageThree.addEventListener('click', () => {
+	carouselImageZero.classList.value = '';
+	carouselImageOne.classList.value = '';
+	carouselImageTwo.classList.value = '';
+	carouselImageFour.classList.value = '';
+	carouselImageThree.classList.add('active');
+	profileImageTop.setAttribute('src', carouselImageThree.src);
+	profileImageContainer.setAttribute('href', carouselImageThree.src);
+})
+carouselImageFour.addEventListener('click', () => {
+	carouselImageZero.classList.value = '';
+	carouselImageOne.classList.value = '';
+	carouselImageTwo.classList.value = '';
+	carouselImageThree.classList.value = '';
+	carouselImageFour.classList.add('active');
+	profileImageTop.setAttribute('src', carouselImageFour.src);
+	profileImageContainer.setAttribute('href', carouselImageFour.src);
+})
+
 
 

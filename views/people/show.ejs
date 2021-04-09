@@ -8,17 +8,27 @@
         <div class="profile-top">
             <div class="profile-pic">
                 <div class="profile-carousel-container">
-                    <% if(person.uploadedImages){ %>
-                    <img src="/<%= person.uploadedImages[0].path %>">
-                    <% } else { %>
+                    <% if(person.uploadedImages === []){ %>
                         <img src="/images/default-profile.jpeg">
+                        <div class="profile-carousel-track">
+                            <img src="/images/default-profile.jpeg">
+                            <img src="/images/default-profile.jpeg">
+                            <img src="/images/default-profile.jpeg">
+                            <img src="/images/default-profile.jpeg">
+                            <img src="/images/default-profile.jpeg">
+                        </div>
+                    <% } else { %>
+                        <a target="_blank" id="profile-img-container" href="/<%= person.uploadedImages[0].path %>">
+                            <img id="profile-img-top" src="/<%= person.uploadedImages[0].path %>">
+                        </a>
+                        <div class="profile-carousel-track">
+                            <img id="carousel-img-zero" class="active" src="/<%= person.uploadedImages[0].path %>">
+                            <img id="carousel-img-one" src="/<%= person.uploadedImages[1].path %>">
+                            <img id="carousel-img-two" src="/<%= person.uploadedImages[2].path %>">
+                            <img id="carousel-img-three" src="/<%= person.uploadedImages[3].path %>">
+                            <img id="carousel-img-four" src="/<%= person.uploadedImages[4].path %>">
+                        </div>
                         <% } %>
-                    <div class="profile-carousel-track">
-                        <img src="/<%= person.uploadedImages[1].path %>">
-                        <img src="/<%= person.uploadedImages[2].path %>">
-                        <img src="/<%= person.uploadedImages[3].path %>">
-                        <img src="/<%= person.uploadedImages[4].path %>">
-                    </div>
                 </div>
                 
                 <div class="edit-btns">
@@ -39,7 +49,14 @@
                 <div class="profile-overview-text header-overview">
                     <p><span>Name:</span> <%= person.firstName %> <%= person.lastName %></p>
                     <p><span>Gender:</span> <%= person.gender %></p>
-                    <p><span>Age:</span> <%= new Date().getFullYear() - person.birthday.getFullYear(); %></p>
+                    <p><span>Age:</span>
+                         <% function _calculateAge(birthday) { %>
+                         <%   var ageDifMs = Date.now() - birthday.getTime(); %>
+                           <% var ageDate = new Date(ageDifMs); %>
+                          <%  return Math.abs(ageDate.getUTCFullYear() - 1970); %>
+                        <% } %>
+                        <%= _calculateAge(person.birthday) %>
+                        </p>
                     <p><span>Seeking:</span> <%= person.seeking %> between <%= person.ageRange %></p>
                     <p><span>Ethnicity: </span><%= person.ethnicity %></p>
                     <p><span>Religion: </span><%= person.religion %></p>
@@ -169,10 +186,73 @@
             </div>    
             </div>
         </div>
+        <div class="profile-section personality-container">
+            <div class="personality-row">
+                <div class="icon-button-sm">
+                    <i class="tooltip fas fa-dumbbell"></i>
+                    <p>Exercises Weekly</p>
+                </div>
+                <div class="icon-button-sm">
+                    <i class="tooltip fas fa-dumbbell"></i>
+                    <p>Exercises Weekly</p>
+                </div>
+                <div class="icon-button-sm">
+                    <i class="tooltip fas fa-dumbbell"></i>
+                    <p>Exercises Weekly</p>
+                </div>
+                <div class="icon-button-sm">
+                    <i class="tooltip fas fa-dumbbell"></i>
+                    <p>Exercises Weekly</p>
+                </div>
+                <div class="icon-button-sm">
+                    <i class="tooltip fas fa-dumbbell"></i>
+                    <p>Exercises Weekly</p>
+                </div>
+                <div class="icon-button-sm">
+                    <i class="tooltip fas fa-dumbbell"></i>
+                    <p>Exercises Weekly</p>
+                </div>
 
-        
-    </div>
-    
+            </div>
+            <div class="personality-row">
+                <div class="icon-button-md">
+                    <i class="tooltip fas fa-dumbbell"></i>
+                    <p>Exercises Weekly</p>
+                </div>
+                <div class="icon-button-md">
+                    <i class="tooltip fas fa-dumbbell"></i>
+                    <p>Exercises Weekly</p>
+                </div>
+                <div class="icon-button-md">
+                    <i class="tooltip fas fa-dumbbell"></i>
+                    <p>Exercises Weekly</p>
+                </div>
+                <div class="icon-button-md">
+                    <i class="tooltip fas fa-dumbbell"></i>
+                    <p>Exercises Weekly</p>
+                </div>
+                <div class="icon-button-md">
+                    <i class="tooltip fas fa-dumbbell"></i>
+                    <p>Exercises Weekly</p>
+                </div>
+                <div class="icon-button-md">
+                    <i class="tooltip fas fa-dumbbell"></i>
+                    <p>Exercises Weekly</p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="profile-section personality-container">
+            <h2>Open Ended Questions</h2>
+            <div class="openended-item">
+                <h3>Intimacy:</h3>
+                <p class="openended-p"><%= person.intimacy %></p>
+            </div>
+        </div>
+
 </main>
+
+
 <script src="/helpers.js"></script>
 <%- include('../partials/footer') %>

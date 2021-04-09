@@ -23,7 +23,12 @@
             <div>
             <label for="birthday" >
                 <p>Birthday</p>
-                <input type="date" min="1903-01-02" max="2004-01-01" name="birthday" placeholder="Birthday" required>
+                <% let maxDate = new Date(Date.now()).toISOString() %>
+                <% const currentDate = new Date() ; %>
+                <% const currentYear = parseInt(currentDate.getFullYear()); %>
+                <% const maxYear = currentYear - 18; %>
+                <% const finalYear = maxYear.toString(); %>
+                <input type="date" min="1903-01-02" max="<%= finalYear + maxDate.substring(4,10); %>" name="birthday" placeholder="Birthday" required>
             </label>
             </div>
                     <!-- Gender -->

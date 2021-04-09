@@ -466,8 +466,7 @@ main h1{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin: 1em;
-    
+    margin-bottom: 2em;
     justify-content: center;
 }
 .profile-pic{
@@ -481,7 +480,7 @@ main h1{
     justify-content: center;
 }
 .profile-carousel-container img{
-    max-width: 300px;
+    max-height: 250px;
     margin-bottom: 1em;
 }
 .profile-carousel-track{
@@ -489,9 +488,19 @@ main h1{
 }
 
 .profile-carousel-track img{
-    max-width: 75px;
-    max-height: 75px;
+    max-width: 50px;
+    max-height: 50px;
     margin: 10px;
+    border: transparent 3px solid;
+}
+.profile-carousel-track img:hover{
+    cursor: pointer;
+    border: forestgreen 3px solid;
+    opacity: 0.7;
+}
+.profile-carousel-track .active{
+    border: forestgreen 3px solid;
+    opacity: 0.7;
 }
 #profile-header-btns{
     display: flex;
@@ -619,11 +628,6 @@ main h1{
 .profile-section-text p>span{
     font-weight: bold;
 }
-.profile-section i {
-    font-size: 5em;
-    margin: .25em;
-    margin-top: .75em;
-}
 
 .profile-section .fas:hover, .profile-section .far:hover{
     opacity: .7;
@@ -690,6 +694,74 @@ main h1{
       align-items: center;
       justify-content: center;
   }
+  .icon-container i {
+    font-size: 5em;
+    margin: .25em;
+    margin-top: .75em;
+
+  }
+  .icon-button-sm, .icon-button-md{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1em;
+      margin-bottom: 1.5em;
+  }
+  .icon-button-sm:hover, .icon-button-md:hover{
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  .icon-button-sm{
+      height: 50px;
+      width: 200px;
+      background-color: #fcfcfc;
+      border-radius: 30px;
+      -webkit-box-shadow: 0px 5px 11px -1px #000000; 
+        box-shadow: 0px 5px 11px -1px #000000;
+
+  }
+  .icon-button-sm i{
+      margin-right: 1em;
+      font-size: 1.25em;
+  }
+  .icon-button-md{
+      height: 75px;
+      width: 300px;
+      font-size: 1.25em;
+      background-color: #fcfcfc;
+      border-radius: 30px;
+      -webkit-box-shadow: 0px 5px 11px -1px #000000; 
+        box-shadow: 0px 5px 11px -1px #000000;
+        letter-spacing: 2px;
+
+  }
+  .icon-button-md i{
+      margin-right: 1em;
+  }
+  .personality-row{
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+  }
+  .personality-container{
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .openended-item{
+      font-size: 1.5em;
+      letter-spacing: 1.5px;
+  }
+  .openended-item h3{
+      width: fit-content;
+    border-bottom: red 2px solid;
+    text-align: center;
+  }
+  .openended-p{
+      margin-top: 1em;
+  }
+
 /* ---------------------------------------------------
                      footer                
 --------------------------------------------------- */
@@ -751,5 +823,8 @@ footer .fa-tiktok:hover{
     .profile-overview{
         width: 97%;
         margin-left: 0;
+    }
+    .profile-pic{
+        margin-bottom: 4em;
     }
 }
