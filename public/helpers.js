@@ -131,4 +131,3 @@ carouselImageFour.addEventListener('click', () => {
 })
 
 
-

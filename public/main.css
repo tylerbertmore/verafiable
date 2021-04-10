@@ -302,10 +302,15 @@ table {
     align-items: center;
     background-color: #e0e0e0;
 }
+.required:after {
+    content:" *";
+    color: red;
+  }
 #disclaimer{
     border: gray 2px solid;
     border-radius: 30px;
-    padding: 1em;
+    font-size: .6em;
+    padding: 1em 3em;
     max-height: 500px;
     overflow: scroll;
     margin-top: 3em;
@@ -314,17 +319,25 @@ table {
 /* Designing for scroll-bar */
 #disclaimer::-webkit-scrollbar {
     border-radius: 30px;
+    
 }
 #terms-of-service{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .75em;
 }
 #terms-of-service input{
-    width: 30%;
+    width: 10%;
+    margin-left: 2em;
+    height: 3vh;
+}
+#terms-of-service input:hover{
+    cursor: pointer;
 }
 #e-sig{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 #e-sig input{
@@ -381,7 +394,7 @@ textarea{
     min-width: 100px;
 }
   
-  .question-category{
+  .question-category, .question-category-one{
       display: flex;
     align-items: flex-start;
       flex-wrap: wrap;
@@ -393,7 +406,7 @@ textarea{
       background-color: white;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }
-  .question-category h2{
+  .question-category h2, .question-category-one h2{
     position: absolute;
     top: 1em;
     left: 1em;
@@ -404,8 +417,11 @@ textarea{
       height: 6vh;
   }
 
-  .question-category div{
+  .question-category div, .question-category-one div{
       margin:  1em;
+  }
+  .question-category-one {
+      margin-bottom: 2em;
   }
   #gender-container{
       display: flex;

@@ -45,12 +45,42 @@
     <% } %>
         <% if(person.seeking === 'Both') { %><td> <i class="fas fa-venus-mars"></i> Both</td>
     <% } %>
-        <td><%= person.children %></td>
-        <td><%= person.cigaretteUse %></td>
-        <td><%= person.alcoholUse %></td>
-        <td><%= person.religion %></td>
-        <td><%= person.exercise %></td>
-        <td><%= person.pets %></td>
+        <td>
+            <% if(!person.children) { %>
+                Undisclosed
+                <% } %>
+            <%= person.children %>
+        </td>
+        <td>
+            <% if(!person.cigaretteUse) { %>
+                Undisclosed
+                <% } %>
+            <%= person.cigaretteUse %>
+        </td>
+        <td>
+            <% if(!person.alcoholUse) { %>
+                Undisclosed
+                <% } %>
+            <%= person.alcoholUse %>
+        </td>
+        <td>
+            <% if(!person.religion) { %>
+                Undisclosed
+                <% } %>
+            <%= person.religion %>
+        </td>
+        <td>
+            <% if(!person.exercise) { %>
+                Undisclosed
+                <% } %>
+            <%= person.exercise %>
+        </td>
+        <td>
+            <% if(!person.pets) { %>
+                Undisclosed
+                <% } %>
+            <%= person.pets %>
+        </td>
     </tr>
     <% }) %>
 
