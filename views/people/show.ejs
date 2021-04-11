@@ -47,43 +47,227 @@
                     <button class="header-btn header-2">Personality</button>
                     <button class="header-btn header-3">Career/Hobbies</button>
                     <button class="header-btn header-4">Body Art</button>
-                    <button class="header-btn header-5">Looking For</button>
+                    <button class="header-btn header-5">Family</button>
                 </div>
                 <div class="profile-overview-text header-overview">
-                    <p><span>Name:</span> <%= person.firstName %> <%= person.lastName %></p>
-                    <p><span>Gender:</span> <%= person.gender %></p>
-                    <p><span>Age:</span>
-                         <% function _calculateAge(birthday) { %>
-                         <%   var ageDifMs = Date.now() - birthday.getTime(); %>
-                           <% var ageDate = new Date(ageDifMs); %>
-                          <%  return Math.abs(ageDate.getUTCFullYear() - 1970); %>
-                        <% } %>
-                        <%= _calculateAge(person.birthday) %>
-                        </p>
-                    <p><span>Seeking:</span> <%= person.seeking %> between <%= person.ageRange %></p>
-                    <p><span>Ethnicity: </span><%= person.ethnicity %></p>
-                    <p><span>Religion: </span><%= person.religion %></p>
-                    <p><span>Politics: </span><%= person.politics %></p>
-                    <p><span>Originally From: </span><%= person.originallyFrom %></p>
-                    <p><span>Living In: </span><%= person.areaOfTown %></p>
-                    
+                    <div class="show-container">
+                        <p>Name:</p>
+                        <div class="show-text">
+                            <h5><%= person.firstName %> <%= person.lastName %>
+                                <% if(person.gender === 'Female') { %>
+                                    <i class="fas fa-venus"></i>
+                                    <% } %>
+                                <% if(person.gender === 'Other') { %>
+                                    <i class="fas fa-transgender-alt"></i>
+                                    <% } %>
+                                <% if(person.gender === 'Male') { %>
+                                    <i class="fas fa-mars"></i>
+                                    <% } %>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="show-container">
+                        <p>Age:</p>
+                        <div class="show-text">
+                            <h5>
+                                <% function _calculateAge(birthday) { %>
+                                <%   var ageDifMs = Date.now() - birthday.getTime(); %>
+                                  <% var ageDate = new Date(ageDifMs); %>
+                                 <%  return Math.abs(ageDate.getUTCFullYear() - 1970); %>
+                               <% } %>
+                               <%= _calculateAge(person.birthday) %>
+                                </h5>
+                        </div>
+                    </div>
+                    <div class="show-container">
+                        <p>Seeking:</p>
+                        <div class="show-text">
+                            <h5>
+                                <% if(person.seeking === 'Both') { %>
+                                    <%= person.seeking %> Men and Women age <%= person.ageRange %>
+                                    <% } else { %>
+                                <%= person.seeking %> age <%= person.ageRange %>
+                                    <% } %>
+                                </h5>
+                        </div>
+                    </div>
+                    <div class="show-container">
+                        <p>Height:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.height %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Ethnicity:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.ethnicity %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Body Type:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.bodyType %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Politics:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.politics %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Religion:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.religion %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>From:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.originallyFrom %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Lives in:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.areaOfTown %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Previously Married: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.prevMarried %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Has Kids: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.children %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Wants Kids: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.wantChildren %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Willing to be Step Parent: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.stepParent %>
+                                </h5>
+                        </div>
+                    </div> 
+
 
                     
 
                 </div>
                 <div class="profile-overview-text hidden header-career">
-                    <p><span>Career: </span><%= person.profession %></p>
-
-                    <p><span>Hobbies: </span><%= person.hobbies1 %>, <%= person.hobbies2 %>, <%= person.hobbies1 %></p>
+                    <div class="show-container">
+                        <p>Career Industry:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.professionIndustry %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Career: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.profession %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Length in Position: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.professionLength %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Work Schedule: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.professionSchedule %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Hobbies: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.hobbies1 %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p> </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.hobbies2 %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p> </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.hobbies3 %>
+                                </h5>
+                        </div>
+                    </div> 
 
                 </div>
                 <div class="profile-overview-text hidden header-lookingfor">
-                    <p><span>General Type: </span><%= person.partnerType %></p>
-                    <p><span>Desired Physical Traits </span><%= person.threePhysicalTraits %></p>
-                    <p><span>Deal Breakers: </span><%= person.dealBreakers %></p>
-                    
-
-                </div>
+                    <div class="show-container">
+                        <p>Siblings:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.siblings %>
+                                </h5>
+                        </div>
+                    </div>
+                    <div class="show-container">
+                        <p>Family Closeness:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.familyCloseness %>
+                                </h5>
+                        </div>
+                    </div>
+                    <div class="show-container">
+                        <p>Family In Vegas:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.familyInVegas %>
+                                </h5>
+                        </div>
+                    </div>
                 <div class="profile-overview-text hidden header-personality">
                     <p><span><%= person.dominantSubmissive %></span></p>
                 </div>

@@ -2,6 +2,9 @@
     --primary: #ED1C24;
     --secondary: #ffffff;
     --black: #000000;
+    --surface: #121212;
+    --surfacesecondary: #262626;
+    --surfacethird: #393939;
 }
 /* ---------------------------------------------------
                      global                
@@ -270,7 +273,7 @@ table {
   }
   
   tr:nth-child(1) {
-    background-color: var(--black);
+    background-color: var(--surface);
     color: var(--secondary);
     width: 708px;
     overflow: scroll;
@@ -300,7 +303,7 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e0e0e0;
+    background-color: var(--surface);
 }
 .required:after {
     content:" *";
@@ -508,10 +511,12 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e0e0e0
+    background-color: #e2e2e2;
 }
+
 main h1{
     margin-top: 2em;
+    color: var(--surfacesecondary)
 }
 .profile-container{
     min-height: 700px;
@@ -571,7 +576,7 @@ main h1{
 }
 #profile-header-btns button{
     height: 8vh;
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 10px;
     border: none;
     background-color:#fcfcfc;
@@ -604,9 +609,10 @@ main h1{
     width: 60%;
     margin-left: 2em;
     border-radius: 30px;
-      background-color: white;
+      background-color: var(--secondary);
       box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     overflow: auto;
+    color: var(--surfacesecondary)
     }
 .profile-overview h2{
     font-size: 2em;
@@ -614,15 +620,41 @@ main h1{
 .profile-overview-text{
     display: flex;
     flex-wrap: wrap;
-    margin: 1em;
+    margin: 0 1em 1em 1em;
     font-size: 1.25em;
 
+}
+.show-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 48px;
+    color: var(--surfacesecondary)
 }
 .profile-overview-text p {
     margin: 1em;
     
     
 }
+
+.show-container p{
+    align-self: flex-start;
+    margin-bottom: .5em;
+    min-height: 23px;
+    color: var(--surfacesecondary)
+    
+}
+.show-text{
+    background-color: #efefef;
+    /* border-radius: 20px; */
+    padding: 12px;
+    margin-left: 1em;
+    -webkit-box-shadow: 2px 2px 5px 0px #000000; 
+    box-shadow: 2px 2px 5px 0px #000000;
+}
+.show-text h5{
+    margin: 0;
+}
+
 .profile-overview-text p>span{
     font-weight: bold;
 }
@@ -662,10 +694,11 @@ main h1{
     align-items: center;
     justify-content: space-around;
     border-radius: 30px;
-      background-color: white;
+      background-color: var(--secondary);
       box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     margin: 1em;
     padding: 1em;
+    color: var(--surfacesecondary)
 }
 .profile-section h2{
     position: absolute;
@@ -774,6 +807,7 @@ main h1{
   .icon-button-sm{
       height: 50px;
       width: 200px;
+      color: var(--surfacesecondary);
       background-color: #fcfcfc;
       border-radius: 30px;
       -webkit-box-shadow: 0px 5px 11px -1px #000000; 
@@ -793,6 +827,7 @@ main h1{
       -webkit-box-shadow: 0px 5px 11px -1px #000000; 
         box-shadow: 0px 5px 11px -1px #000000;
         letter-spacing: 2px;
+        color: var(--surfacesecondary)
 
   }
   .icon-button-md i{
