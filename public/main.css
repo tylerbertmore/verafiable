@@ -303,7 +303,7 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--surface);
+    background-color: #e2e2e2;
 }
 .required:after {
     content:" *";
@@ -323,6 +323,12 @@ table {
 #disclaimer::-webkit-scrollbar {
     border-radius: 30px;
     
+}
+#disclaimer h3{
+    margin-top: 1em;
+    letter-spacing: 1px;
+    font-size: 1.75em;
+
 }
 #terms-of-service{
     display: flex;
@@ -530,7 +536,7 @@ main h1{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     justify-content: center;
 }
 .profile-pic{
@@ -622,7 +628,7 @@ main h1{
     flex-wrap: wrap;
     margin: 0 1em 1em 1em;
     font-size: 1.25em;
-
+    
 }
 .show-container{
     display: flex;
@@ -845,15 +851,23 @@ main h1{
 
   .openended-item{
       font-size: 1.5em;
-      letter-spacing: 1.5px;
+      
+      margin: 1.5em;
   }
-  .openended-item h3{
+
+ #first-openended{
+      margin-top: 4em;
+  }
+  #openended-title{
+      font-size: 2em;
+      border-bottom: solid red 2px;
       width: fit-content;
-    border-bottom: red 2px solid;
-    text-align: center;
   }
+
   .openended-p{
       margin-top: 1em;
+      margin-left: 1em;
+      letter-spacing: 1.5px;
   }
 
 /* ---------------------------------------------------

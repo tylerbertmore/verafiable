@@ -431,12 +431,26 @@
 
         </div>
         <div class="profile-section personality-container">
-            <h2>Open Ended Questions</h2>
+            <h2 id="openended-title">Open Ended Questions</h2>
+            <div class="openended-item" id="first-openended">
+                <h4>How do you show love/ prefer to be loved?</h4>
+                <p class="openended-p"><%= person.loveLanguage %></p>
+            </div>
             <div class="openended-item">
-                <h3>Intimacy:</h3>
-                <p class="openended-p"><%= person.intimacy %></p>
+                <h4>What are 3 Physical traits that are important to you?</h4>
+                <p class="openended-p"><%= person.threePhysicalTraits  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What does your ideal partner look like?</h4>
+                <p class="openended-p"><%= person.partnerLooks  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What does your ideal partner look like?</h4>
+                <p class="openended-p"><%= person.partnerLooks  %></p>
             </div>
         </div>
+    
+
 
 </main>
 
