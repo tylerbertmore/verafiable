@@ -649,7 +649,7 @@ main h1{
     color: var(--surfacesecondary)
     
 }
-.show-text{
+.show-text, openended-p{
     background-color: #efefef;
     /* border-radius: 20px; */
     padding: 12px;
@@ -659,6 +659,10 @@ main h1{
 }
 .show-text h5{
     margin: 0;
+}
+
+.contact-container{
+    font-size: 1.5em;
 }
 
 .profile-overview-text p>span{
@@ -735,7 +739,9 @@ main h1{
     position: relative;
     display: inline-block;
   }
-  
+
+
+
   .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
@@ -847,12 +853,16 @@ main h1{
   .personality-container{
       flex-direction: column;
       align-items: flex-start;
+      margin-top: 3em;
+      min-height: 1px;
   }
 
   .openended-item{
       font-size: 1.5em;
-      
       margin: 1.5em;
+  }
+  .openended-item h4{
+    font-weight: 400;
   }
 
  #first-openended{
@@ -868,7 +878,19 @@ main h1{
       margin-top: 1em;
       margin-left: 1em;
       letter-spacing: 1.5px;
+      width: fit-content;
   }
+
+  #logistics-container{
+    flex-direction: row;
+    padding-top: 6em;
+    padding-bottom: 4em;
+    justify-content: flex-start;
+}
+#logistics-container .show-container{
+    margin-top: 1em;
+    margin-left: 1.5em;
+}
 
 /* ---------------------------------------------------
                      footer                

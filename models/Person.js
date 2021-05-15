@@ -35,6 +35,7 @@ const personSchema = new mongoose.Schema({
   partnerTattoos: String,
   piercings: String,
   piercingPlaces: Array,
+  partnerPiercings: String,
   socialMedia: String,
   military: String,
   militaryBranch: String,

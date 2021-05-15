@@ -147,38 +147,7 @@
                                 </h5>
                         </div>
                     </div> 
-                    <div class="show-container">
-                        <p>Previously Married: </p>
-                        <div class="show-text">
-                            <h5>
-                                <%= person.prevMarried %>
-                                </h5>
-                        </div>
-                    </div> 
-                    <div class="show-container">
-                        <p>Has Kids: </p>
-                        <div class="show-text">
-                            <h5>
-                                <%= person.children %>
-                                </h5>
-                        </div>
-                    </div> 
-                    <div class="show-container">
-                        <p>Wants Kids: </p>
-                        <div class="show-text">
-                            <h5>
-                                <%= person.wantChildren %>
-                                </h5>
-                        </div>
-                    </div> 
-                    <div class="show-container">
-                        <p>Willing to be Step Parent: </p>
-                        <div class="show-text">
-                            <h5>
-                                <%= person.stepParent %>
-                                </h5>
-                        </div>
-                    </div> 
+
 
 
                     
@@ -217,33 +186,42 @@
                                 </h5>
                         </div>
                     </div> 
-                    <div class="show-container">
-                        <p>Hobbies: </p>
-                        <div class="show-text">
-                            <h5>
-                                <%= person.hobbies1 %>
-                                </h5>
-                        </div>
-                    </div> 
-                    <div class="show-container">
-                        <p> </p>
-                        <div class="show-text">
-                            <h5>
-                                <%= person.hobbies2 %>
-                                </h5>
-                        </div>
-                    </div> 
-                    <div class="show-container">
-                        <p> </p>
-                        <div class="show-text">
-                            <h5>
-                                <%= person.hobbies3 %>
-                                </h5>
-                        </div>
-                    </div> 
+                    
 
                 </div>
                 <div class="profile-overview-text hidden header-lookingfor">
+                    <div class="show-container">
+                        <p>Previously Married: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.prevMarried %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Has Kids: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.children %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Wants Kids: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.wantChildren %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p>Willing to be Step Parent: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.stepParent %>
+                                </h5>
+                        </div>
+                    </div> 
                     <div class="show-container">
                         <p>Siblings:</p>
                         <div class="show-text">
@@ -268,185 +246,445 @@
                                 </h5>
                         </div>
                     </div>
+                </div>
                 <div class="profile-overview-text hidden header-personality">
-                    <p><span><%= person.dominantSubmissive %></span></p>
+                    <div class="show-container">
+                        <p>Hobbies: </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.hobbies1 %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p> </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.hobbies2 %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        <p> </p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.hobbies3 %>
+                                </h5>
+                        </div>
+                    </div> 
+                    <div class="show-container">
+                        
+                        <p>Relationship Role:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.dominantSubmissive %>
+                                </h5>
+                        </div>
+                    </div>
+                    <div class="show-container">
+                        
+                        <p>Self Esteem:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.selfEsteem %>
+                                </h5>
+                        </div>
+                    </div>
+                    
+
+                        <div class="show-container">
+                        
+                            <p>Military Partner:</p>
+                            <div class="show-text">
+                                <h5>
+                                    <%= person.partnerMilitary %>
+                                    </h5>
+                            </div>
+                        </div>
+                    <div class="show-container">
+                        <p>Desired Partner Ethnicity:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.partnerEthnicity %>
+                                </h5>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="profile-overview-text hidden header-bodyart">
-                    <p><span>Piercings:  </span><%= person.piercings %></p>
+                    <div class="show-container">
+                        <p>Piercings:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.piercings %>
+                                </h5>
+                        </div>
+                    </div>
                     <% if(person.piercings === 'Yes') { %>
-                        <p><span>Piercing Locations:  </span><%= person.piercingPlaces %></p>
-                        <% } %>
-                        <p><span>Okay with Partner Piercings?:  </span><%= person.partnerPiercings %></p>
-                    <p><span>Tattoos:  </span><%= person.tattoos %></p>
+                    <div class="show-container">
+                        <p>Piercing Locations:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.person.piercingPlaces %>
+                                </h5>
+                        </div>
+                    </div>
+                    <% } %>
+                    <div class="show-container">
+                        <p>Partner Piercings?</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.partnerPiercings %>
+                                </h5>
+                        </div>
+                    </div>
+                    <div class="show-container">
+                        <p>Tattoos:</p>
+                        <div class="show-text">
+                            <h5>
+                                <%= person.tattoos %>
+                                </h5>
+                        </div>
+                    </div>
                     <% if(person.tattoos === 'Yes') { %>
-                        <p><span>Tattoo Locations:  </span><%= person.tattooPlaces %></p>
+                        <div class="show-container">
+                            <p>Tattoos Locations:</p>
+                            <div class="show-text">
+                                <h5>
+                                    <%= person.tattooPlaces %>
+                                    </h5>
+                            </div>
+                        </div>
                         <% } %>
-                        <p><span>Okay with Partner Tattoos?:  </span><%= person.partnerTattoos %></p>
+                        <div class="show-container">
+                            <p>Partner Tattoos?</p>
+                            <div class="show-text">
+                                <h5>
+                                    <%= person.partnerTattoos %>
+                                    </h5>
+                            </div>
+                        </div>
                     
                 </div>
-            </div>
             
         </div>
         
         
-        <div class="profile-section">
-
-            <div class="icon-container">
-                <div class="icon-container-top">
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-cannabis"><span class="tooltiptext"><%= person.marijuanaUse %></span></i>
-                    <p>Marijuana Use</p>
-                </div>
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-beer"><span class="tooltiptext"><%= person.alcoholUse %></span></i>
-                    <p>Alcohol Use</p>
-                </div>
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-smoking"><span class="tooltiptext"><%= person.cigaretteUse %></span></i>
-                    <p>Cigarettes</p>
-                </div>
-            </div>
-            <div class="icon-container-bottom">
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-network-wired"><span class="tooltiptext"><%= person.socialMedia %></span></i>
-                    <p>Social Media Use</p>
-                </div>
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-tv"><span class="tooltiptext"><%= person.tv %></span></i>
-                    <p>TV Watching</p>
-                </div>
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-gamepad"><span class="tooltiptext"><%= person.gamer %></span></i>
-                    <p>Gamer</p>
-                </div>
-            </div>    
-            </div>
-            <div class="icon-container">
-                <div class="icon-container-top">
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-baby"><span class="tooltiptext"><%= person.wantChildren %></span></i>
-                    <p>Wants Kids</p>
-                </div>
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-child"><span class="tooltiptext"><%= person.children %></span></i>
-                    <p>Has Kids</p>
-                </div>
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-ring"><span class="tooltiptext"><%= person.prevMarried %></span></i>
-                    <p>Married Before</p>
-                </div>
-            </div>
-            <div class="icon-container-bottom">
-                <div class="icon-text-container">
-                    <i class="tooltip far fa-star"><span class="tooltiptext"><%= person.military %></span></i>
-                    <p>Military</p>
-                </div>
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-user-shield"><span class="tooltiptext"><%= person.partnerMilitary %></span></i>
-                    <p>Military Spouse</p>
-                </div>
-            </div>    
-            </div>
-            <div class="icon-container">
-                <div class="icon-container-top">
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-leaf"><span class="tooltiptext"><%= person.outdoorsy %></span></i>
-                    <p>Outdoorsy</p>
-                </div>
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-dumbbell"><span class="tooltiptext"><%= person.exercise %></span></i>
-                    <p>Exercise</p>
-                </div>
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-book"><span class="tooltiptext"><%= person.books %></span></i>
-                    <p>Bookworm</p>
-                </div>
-            </div>
-            <div class="icon-container-bottom">
-                <div class="icon-text-container">
-                    <i class="tooltip fas fa-paw"><span class="tooltiptext"><%= person.pets %></span></i>
-                    <p>Pets</p>
-                </div>
-
-
-
-            </div>    
-            </div>
-        </div>
         <div class="profile-section personality-container">
             <div class="personality-row">
-                <div class="icon-button-sm">
-                    <i class="tooltip fas fa-dumbbell"></i>
-                    <p>Exercises Weekly</p>
+                <% if(person.exercise !== 'Never'){ %>
+
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-dumbbell"></i>
+                        <p>Exercises <%= person.exercise %></p>
+                    </div>
+             <%   }  %>
+                <% if(person.cigaretteUse !== 'Never'){ %>
+
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-smoking"></i>
+                        <p>Smokes <%= person.cigaretteUse %></p>
+                    </div>
+             <%   }  %>
+                <% if(person.alcoholUse !== 'Never'){ %>
+
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-beer"></i>
+                        <p>Drinks <%= person.alcoholUse %></p>
+                    </div>
+             <%   }  %>
+                <% if(person.marijuanaUse !== 'Never'){ %>
+
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-cannabis"></i>
+                        <p>Tokes <%= person.marijuanaUse %></p>
+                    </div>
+             <%   }  %>
+                <% if(person.outdoorsy === 'Yes'){ %>
+
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-leaf"></i>
+                        <p>Outdoorsy</p>
+                    </div>
+             <%   }  %>
+                <% if(person.books === 'Yes'){ %>
+
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-book"></i>
+                        <p>Bookworm</p>
+                    </div>
+             <%   }  %>
+                <% if(person.travel !== 'Never'){ %>
+
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-plane-departure"></i>
+                        <p>Likes Travel</p>
+                    </div>
+             <%   }  %>
+                <% if(person.gamer !== 'No'){ %>
+
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-gamepad"></i>
+                        <p>Likes Gaming</p>
+                    </div>
+             <%   }  %>
+                <% if(person.pets !== 'No'){ %>
+
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-paw"></i>
+                        <p>Has Pet(s)</p>
+                    </div>
+             <%   }  %>
+                <% if(person.military !== 'No'){ %>
+
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-star"></i>
+                        <p>Served in: <%= person.militaryBranch %></p>
+                    </div>
+             <%   }  %>
+                <% if(person.prevMarried !== 'No'){ %>
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-ring"></i>
+                        <p>Married <%= person.prevMarried %> Before</p>
+                    </div>
+             <%   }  %>
+                <% if(person.children !== 'No'){ %>
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-child"></i>
+                        <p>Kids: <%= person.children %></p>
+                    </div>
+             <%   }  %>
+                <% if(person.wantChildren !== 'No'){ %>
+                    <div class="icon-button-sm">
+                        <i class="tooltip fas fa-baby"></i>
+                        <p>Wants Kids</p>
+                    </div>
+             <%   }  %>
                 </div>
-                <div class="icon-button-sm">
-                    <i class="tooltip fas fa-dumbbell"></i>
-                    <p>Exercises Weekly</p>
-                </div>
-                <div class="icon-button-sm">
-                    <i class="tooltip fas fa-dumbbell"></i>
-                    <p>Exercises Weekly</p>
-                </div>
-                <div class="icon-button-sm">
-                    <i class="tooltip fas fa-dumbbell"></i>
-                    <p>Exercises Weekly</p>
-                </div>
-                <div class="icon-button-sm">
-                    <i class="tooltip fas fa-dumbbell"></i>
-                    <p>Exercises Weekly</p>
-                </div>
-                <div class="icon-button-sm">
-                    <i class="tooltip fas fa-dumbbell"></i>
-                    <p>Exercises Weekly</p>
+        </div>
+        <div class="profile-section personality-container" id="logistics-container">
+            <h2 id="openended-title">Verafied Logistics</h2>
+
+            <div class="show-container contact-container">
+                <p>Client Email: </p>
+                <div class="show-text ">
+                    <h5>
+                        <%= person.clientEmail %>
+                        </h5>
                 </div>
 
             </div>
-            <div class="personality-row">
-                <div class="icon-button-md">
-                    <i class="tooltip fas fa-dumbbell"></i>
-                    <p>Exercises Weekly</p>
-                </div>
-                <div class="icon-button-md">
-                    <i class="tooltip fas fa-dumbbell"></i>
-                    <p>Exercises Weekly</p>
-                </div>
-                <div class="icon-button-md">
-                    <i class="tooltip fas fa-dumbbell"></i>
-                    <p>Exercises Weekly</p>
-                </div>
-                <div class="icon-button-md">
-                    <i class="tooltip fas fa-dumbbell"></i>
-                    <p>Exercises Weekly</p>
-                </div>
-                <div class="icon-button-md">
-                    <i class="tooltip fas fa-dumbbell"></i>
-                    <p>Exercises Weekly</p>
-                </div>
-                <div class="icon-button-md">
-                    <i class="tooltip fas fa-dumbbell"></i>
-                    <p>Exercises Weekly</p>
+            <div class="show-container contact-container">
+                <p>Client Phone: </p>
+                <div class="show-text ">
+                    <h5>
+                        <%= person.phoneNumber %>
+                        </h5>
                 </div>
 
             </div>
+            <div class="show-container contact-container">
+                <p>Looking For: </p>
+                <div class="show-text ">
+                    <h5>
+                        <%= person.relationshipGoal %>
+                        </h5>
+                </div>
 
+            </div>
+            <div class="show-container contact-container">
+                <p>Reason for Joining: </p>
+                <div class="show-text ">
+                    <h5>
+                        <%= person.verafiedJoinReason %>
+                        </h5>
+                </div>
+
+            </div>
+            <div class="show-container contact-container">
+                <p>Mixers? </p>
+                <div class="show-text ">
+                    <h5>
+                        <%= person.mixers %>
+                        </h5>
+                </div>
+
+            </div>
+            <div class="show-container contact-container">
+                <p>Suggestions: </p>
+                <div class="show-text ">
+                    <h5>
+                        <%= person.verafiedSuggestions %>
+                        </h5>
+                </div>
+
+            </div>
         </div>
         <div class="profile-section personality-container">
             <h2 id="openended-title">Open Ended Questions</h2>
             <div class="openended-item" id="first-openended">
                 <h4>How do you show love/ prefer to be loved?</h4>
-                <p class="openended-p"><%= person.loveLanguage %></p>
+                <p class="openended-p show-text"><%= person.loveLanguage %></p>
             </div>
             <div class="openended-item">
                 <h4>What are 3 Physical traits that are important to you?</h4>
-                <p class="openended-p"><%= person.threePhysicalTraits  %></p>
+                <p class="openended-p show-text"><%= person.threePhysicalTraits  %></p>
             </div>
             <div class="openended-item">
                 <h4>What does your ideal partner look like?</h4>
-                <p class="openended-p"><%= person.partnerLooks  %></p>
+                <p class="openended-p show-text"><%= person.partnerLooks  %></p>
             </div>
             <div class="openended-item">
                 <h4>What does your ideal partner look like?</h4>
-                <p class="openended-p"><%= person.partnerLooks  %></p>
+                <p class="openended-p show-text"><%= person.partnerLooks  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Do you have a type? If so, are you open to widening your search for a partner?</h4>
+                <p class="openended-p show-text"><%= person.partnerType  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What are 3 Personality traits that are important to you?</h4>
+                <p class="openended-p show-text"><%= person.threePersonalityTraits  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What do you want in a match?</h4>
+                <p class="openended-p show-text"><%= person.whatDoYouWant  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What are 3 Deal Breakers to you?</h4>
+                <p class="openended-p show-text"><%= person.dealBreakers  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What are 3 pet peeves of yours?</h4>
+                <p class="openended-p show-text"><%= person.petPeeves  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Are you a Heartbreaker?</h4>
+                <p class="openended-p show-text"><%= person.heartBreaker  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>How many times have you been in love?</h4>
+                <p class="openended-p show-text"><%= person.beenInLove  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>How do you feel about intimacy?</h4>
+                <p class="openended-p show-text"><%= person.intimacy  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>When did your last relationship end?</h4>
+                <p class="openended-p show-text"><%= person.whenLastRelationship  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Why did your last relationship end?</h4>
+                <p class="openended-p show-text"><%= person.whyLastRelationship  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What are 3 of your personal/work goals for this year?</h4>
+                <p class="openended-p show-text"><%= person.threePersonalGoals  %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What are 3 of your flaws you want to improve on?</h4>
+                <p class="openended-p show-text"><%= person.threeCharacterFlaws %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What are 3 things you bring to the table?</h4>
+                <p class="openended-p show-text"><%= person.threeThingsTable %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Who is your celebrity crush?</h4>
+                <p class="openended-p show-text"><%= person.celebCrush %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Do you enjoy celebrating holidays? Which ones are important to you?</h4>
+                <p class="openended-p show-text"><%= person.holidays %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What did you do for your last Birthday?</h4>
+                <p class="openended-p show-text"><%= person.lastBirthday %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What is a typical day off like for you?</h4>
+                <p class="openended-p show-text"><%= person.dayOff %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What are 3 things you do to show yourself self love?</h4>
+                <p class="openended-p show-text"><%= person.threeSelfLove %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What is your current mental health status?</h4>
+                <p class="openended-p show-text"><%= person.mentalHealth %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Describe 3 main issues with your last relationship?</h4>
+                <p class="openended-p show-text"><%= person.threePastRelationshipIssues %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Perfect date?</h4>
+                <p class="openended-p show-text"><%= person.perfectDate %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What would a potential match do on the first date to make you want to see them again??</h4>
+                <p class="openended-p show-text"><%= person.idealFirstDate %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Do you enjoy cooking?</h4>
+                <p class="openended-p show-text"><%= person.cooking %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Describe your communication style. Are you a quick responder?</h4>
+                <p class="openended-p show-text"><%= person.communicationStyle %></p>
+            </div>
+            <div class="openended-item">
+                <h4>How reliable are you?</h4>
+                <p class="openended-p show-text"><%= person.reliable %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Are you a planner or more of a fly by the seat of your pants person?</h4>
+                <p class="openended-p show-text"><%= person.planner %></p>
+            </div>
+            <div class="openended-item">
+                <h4>How important is hygiene/cleanliness?</h4>
+                <p class="openended-p show-text"><%= person.hygiene %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What is a most frequented spot in Las Vegas?</h4>
+                <p class="openended-p show-text"><%= person.frequentSpot %></p>
+            </div>
+            <div class="openended-item">
+                <h4>If you could plan your future, where do you see yourself in 5 years?</h4>
+                <p class="openended-p show-text"><%= person.fiveYearPlan %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Are you the more dominant or submissive partner in a relationship?</h4>
+                <p class="openended-p show-text"><%= person.dominantSubmissive %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Are you an adventurer/risk taker? What is one of the most risky things you’ve done?</h4>
+                <p class="openended-p show-text"><%= person.adventurer %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Are you into sports? Do you play? Favorite sport?</h4>
+                <p class="openended-p show-text"><%= person.likeSports %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Something not many people know about you.</h4>
+                <p class="openended-p show-text"><%= person.littleKnownFact %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Most prized possession/Who do you look up to?</h4>
+                <p class="openended-p show-text"><%= person.prizedPossesion %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Most prized possession/Who do you look up to?</h4>
+                <p class="openended-p show-text"><%= person.trulyValue %></p>
+            </div>
+            <div class="openended-item">
+                <h4>What is your criminal history? Be Specific.</h4>
+                <p class="openended-p show-text"><%= person.criminalHistory %></p>
+            </div>
+            <div class="openended-item">
+                <h4>Anything else I should know about you or what you’re looking for in a partner?</h4>
+                <p class="openended-p show-text"><%= person.extraInfo %></p>
             </div>
         </div>
     
